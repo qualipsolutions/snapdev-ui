@@ -6,8 +6,24 @@ export default {
   component: DetailLabel,
 };
 
-export const Basic = () => <DetailLabel label="Application Name" text="Snapdev UI Component" />;
+const Template = (args) => <DetailLabel {...args} />;
 
-export const WithNoWrap = () => <DetailLabel label="Application Name" text="Snapdev UI Component" noWrap={false} />;
+export const Basic = Template.bind({});
+Basic.args = {
+  label: 'Story Type',
+  text: 'Args Template Basic',
+};
 
-export const WithWrap = () => <DetailLabel label="Application Name" text="Snapdev UI Component" noWrap />;
+export const WithNoWrap = Template.bind({});
+WithNoWrap.args = {
+  label: 'Story Type',
+  text: 'Args Template',
+  noWrap: false,
+};
+
+export const WithWrap = Template.bind({});
+WithWrap.args = {
+  label: 'Story Type',
+  text: 'Args Template',
+  noWrap: true,
+};
