@@ -10,6 +10,8 @@
 
 # production
 /build
+/snapdev
+/dist
 
 # misc
 .DS_Store
