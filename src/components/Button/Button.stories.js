@@ -2,7 +2,7 @@ import Button from '@material-ui/core/Button';
 import React from 'react';
 
 export default {
-  title: 'Form/Button',
+  title: 'Core/Button',
   component: Button,
 };
 
