@@ -15,8 +15,6 @@
     "jest": true
   },
   "rules": {
-    // "no-debugger": 0,
-    // "no-alert": 0,
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "import/no-extraneous-dependencies": 0,

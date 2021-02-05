@@ -5,6 +5,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import React from 'react';
 
 /**
+ * <pre><code>
  * links={
  *  [{title: '', link: ''}]
  * }
@@ -12,6 +13,7 @@ import React from 'react';
  * interface navigator {
  *  push: (link) => {}
  * }
+ * </code></pre>
  */
 const Breadcrumbs = (props) => {
   const { links, navigator, onNavigate } = props;
