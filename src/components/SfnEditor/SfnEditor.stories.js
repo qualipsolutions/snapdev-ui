@@ -12,45 +12,25 @@ export const Basic = Template.bind({});
 Basic.args = {
   title: 'AWS State Language Editor',
   input: {
-    value: `{
-"Comment": "Workflow",
-"StartAt": "Initialize",
-"States": {
-  "Initialize": {
-    "Type": "Task",
-    "Resource": "arn:aws:states:::lambda:invoke",
-    "TimeoutSeconds": 10,
-    "Parameters": {
-      "FunctionName": "arn:aws:lambda:eu-west-1:116844974399:function:snapflow-service-dev-passAction:$LATEST",
-      "Payload": {
-        "State.$": "$$.State.Name",
-        "InputBuilder": {},
-        "Input.$": "$"
-      }
-    },
-    "OutputPath": "$.Payload",
-    "Next": "Process Task"
-  },
-  "Process Task": {
-    "Type": "Pass",
-    "Result": "Processing done",
-    "Next": "Finalize"
-  },
-  "Finalize": {
-    "Type": "Task",
-    "Resource": "arn:aws:states:::lambda:invoke",
-    "TimeoutSeconds": 10,
-    "Parameters": {
-      "FunctionName": "arn:aws:lambda:eu-west-1:116844974399:function:snapflow-service-dev-passAction:$LATEST",
-      "Payload": {
-        "State.$": "$$.State.Name",
-        "InputBuilder": {},
-        "Input.$": "$"
-      }
-    },
-    "OutputPath": "$.Payload",
-    "End": true
-  }
-}`,
+    value: JSON.stringify(
+      {
+        Comment: 'A Hello World example of the Amazon States Language using Pass states',
+        StartAt: 'Hello',
+        States: {
+          Hello: {
+            Type: 'Pass',
+            Result: 'Hello',
+            Next: 'World',
+          },
+          World: {
+            Type: 'Pass',
+            Result: 'World',
+            End: true,
+          },
+        },
+      },
+      null,
+      2
+    ),
   },
 };

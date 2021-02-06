@@ -3,12 +3,12 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import React from 'react';
+import AWSSfnGraph from '@tshepomgaga/aws-sfn-graph';
+import '@tshepomgaga/aws-sfn-graph/index.css';
+import React, { useState } from 'react';
 import useResizeAware from 'react-resize-aware';
 import CodeMirror from '../CodeMirror/CodeMirror';
 import Panel from '../Panel/Panel';
-// import AWSSfnGraph from './aws-sfn-graph';
-// import './aws-sfn-graph/index.css';
 
 const useStyles = makeStyles((theme) => ({
   helperText: {
@@ -23,12 +23,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SfnEditor = (props) => {
-  // console.log(props);
   const { title, input, meta, loading, graphHeight = 650, readOnly } = props;
-  const { value } = input || {};
+  const { value, onChange } = input || {};
   const { touched, error } = meta || {};
 
   const classes = useStyles();
+
+  const [data, setData] = useState(value);
+
+  const handleDataChange = (newData) => {
+    setData(newData);
+    if (onChange) {
+      onChange(newData);
+    }
+  };
 
   const [resizeListener, sizes] = useResizeAware();
 
@@ -47,7 +55,7 @@ const SfnEditor = (props) => {
               <Grid item xs={12} md={6}>
                 <div className="workflow-editor">
                   <CodeMirror
-                    input={{ ...input }}
+                    input={{ value, onChange: handleDataChange }}
                     meta={{ ...meta }}
                     options={{
                       readOnly: readOnly ? 'nocursor' : false,
@@ -57,7 +65,7 @@ const SfnEditor = (props) => {
               </Grid>
               <Grid item xs={12} md={6} style={{ overflow: 'auto', position: 'relative', border: '1px solid #eaeded' }}>
                 {resizeListener}
-                {/* <AWSSfnGraph data={value} width={sizes.width} height={graphHeight} /> */}
+                <AWSSfnGraph data={data} width={sizes.width} height={graphHeight} />
               </Grid>
             </Grid>
 

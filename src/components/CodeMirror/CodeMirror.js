@@ -1,3 +1,4 @@
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import 'codemirror/addon/edit/matchbrackets';
@@ -12,6 +13,7 @@ import 'codemirror/mode/javascript/javascript';
 import _ from 'lodash';
 import React from 'react';
 import ReactCodeMirror from 'react-codemirror';
+import Alert from '../Alert/Alert';
 import './CodeMirror.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -55,25 +57,31 @@ const CodeMirror = (props) => {
   return (
     <Grid container>
       <Grid item xs={12}>
-        <ReactCodeMirror
-          value={value}
-          onChange={(newValue) => {
-            if (onChange) {
-              onChange(newValue);
-            }
-          }}
-          onFocusChange={(focus) => {
-            if (onFocus) {
-              onFocus(focus);
-            }
-            if (!focus) {
-              if (onBlur) {
-                onBlur(value);
+        {typeof value !== 'string' ? (
+          <Box p={2}>
+            <Alert message="Expected string for value not object" severity="error" />
+          </Box>
+        ) : (
+          <ReactCodeMirror
+            value={value}
+            onChange={(newValue) => {
+              if (onChange) {
+                onChange(newValue);
               }
-            }
-          }}
-          options={mergedOptions}
-        />
+            }}
+            onFocusChange={(focus) => {
+              if (onFocus) {
+                onFocus(focus);
+              }
+              if (!focus) {
+                if (onBlur) {
+                  onBlur(value);
+                }
+              }
+            }}
+            options={mergedOptions}
+          />
+        )}
       </Grid>
     </Grid>
   );

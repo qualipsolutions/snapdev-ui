@@ -2782,6 +2782,11 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+"@tshepomgaga/aws-sfn-graph@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@tshepomgaga/aws-sfn-graph/-/aws-sfn-graph-0.0.6.tgz#89777a3b1cd1787ca577dc8db563762c17c78fd8"
+  integrity sha512-TWnqszS4JQwVHFSG91Azi3kO16a5yKwZ7V8uxbbN+7CX/MGK7HACMTQXlvhuSeixeGs18Cz1rjZki47+FpAvEQ==
+
 "@types/anymatch@*":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
