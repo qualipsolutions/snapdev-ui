@@ -1,8 +1,8 @@
-import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import Center from '../Center/Center';
 import Column from '../Column/Column';
 import DetailLabel from '../DetailLabel/DetailLabel';
+import Item from '../Item/Item';
 import Row from '../Row/Row';
 import Text from '../Text/Text';
 import Spacer from './Spacer';
@@ -14,20 +14,20 @@ export default {
 
 const RowTemplate = (args) => (
   <Row spacing={2}>
-    <Grid item>
+    <Item>
       <DetailLabel label="App Name" text="Snapdev UI" />
-    </Grid>
-    <Grid item>
+    </Item>
+    <Item>
       <DetailLabel label="Version" text="1.0.0" />
-    </Grid>
+    </Item>
     <Spacer style={{ backgroundColor: 'yellow' }}>
       <Center>
         <Text color="primary">I am a spacer</Text>
       </Center>
     </Spacer>
-    <Grid item>
+    <Item>
       <DetailLabel label="Author" text="Qualip Solutions" />
-    </Grid>
+    </Item>
   </Row>
 );
 
@@ -36,20 +36,20 @@ RowSpacer.args = {};
 
 const ColumnTemplate = (args) => (
   <Column style={{ height: '100vh', padding: '20px' }} spacing={2}>
-    <Grid item>
+    <Item>
       <DetailLabel label="App Name" text="Snapdev UI" />
-    </Grid>
-    <Grid item>
+    </Item>
+    <Item>
       <DetailLabel label="Version" text="1.0.0" />
-    </Grid>
+    </Item>
     <Spacer style={{ backgroundColor: 'yellow' }}>
       <Center>
         <Text color="primary">I am a spacer</Text>
       </Center>
     </Spacer>
-    <Grid item>
+    <Item>
       <DetailLabel label="Author" text="Qualip Solutions" />
-    </Grid>
+    </Item>
   </Column>
 );
 

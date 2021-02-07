@@ -1,6 +1,6 @@
-import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import DetailLabel from '../DetailLabel/DetailLabel';
+import Item from '../Item/Item';
 import Column from './Column';
 
 export default {
@@ -15,15 +15,15 @@ Basic.args = {
   spacing: 2,
   children: (
     <>
-      <Grid item>
+      <Item>
         <DetailLabel label="App Name" text="Snapdev UI" />
-      </Grid>
-      <Grid item>
+      </Item>
+      <Item>
         <DetailLabel label="Version" text="1.0.0" />
-      </Grid>
-      <Grid item>
+      </Item>
+      <Item>
         <DetailLabel label="Author" text="Qualip Solutions" />
-      </Grid>
+      </Item>
     </>
   ),
 };

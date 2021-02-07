@@ -1,6 +1,6 @@
-import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import DetailLabel from '../DetailLabel/DetailLabel';
+import Item from '../Item/Item';
 import Spacer from '../Spacer/Spacer';
 import Row from './Row';
 
@@ -13,20 +13,20 @@ const Template = (args) => <Row {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  spacing: 10,
+  spacing: 2,
   children: (
     <>
-      <Grid item>
+      <Item>
         <DetailLabel label="App Name" text="Snapdev UI" />
-      </Grid>
+      </Item>
       <Spacer />
-      <Grid item>
+      <Item>
         <DetailLabel label="Version" text="1.0.0" />
-      </Grid>
+      </Item>
       <Spacer />
-      <Grid item>
+      <Item>
         <DetailLabel label="Author" text="Qualip Solutions" />
-      </Grid>
+      </Item>
     </>
   ),
 };

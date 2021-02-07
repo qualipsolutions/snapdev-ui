@@ -1,9 +1,6 @@
 import React from 'react';
-import Center from '../Center/Center';
 import DetailLabel from '../DetailLabel/DetailLabel';
 import Row from '../Row/Row';
-import Spacer from '../Spacer/Spacer';
-import Text from '../Text/Text';
 import Item from './Item';
 
 export default {
@@ -24,11 +21,6 @@ Basic.args = {
       <Item>
         <DetailLabel label="Version" text="1.0.0" />
       </Item>
-      <Spacer>
-        <Center>
-          <Text color="primary">Spacer</Text>
-        </Center>
-      </Spacer>
       <Item>
         <DetailLabel label="Author" text="Qualip Solutions" />
       </Item>
