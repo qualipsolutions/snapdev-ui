@@ -67,19 +67,7 @@
 .cm-animate-fat-cursor {
   width: auto;
   border: 0;
-  -webkit-animation: blink 1.06s steps(1) infinite;
   animation: blink 1.06s steps(1) infinite;
-}
-@-webkit-keyframes blink {
-  0% {
-    background: #7e7;
-  }
-  50% {
-    background: none;
-  }
-  100% {
-    background: #7e7;
-  }
 }
 @keyframes blink {
   0% {
@@ -296,7 +284,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 }
 .CodeMirror-gutter-wrapper {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
 }
@@ -2826,4 +2813,4 @@ sfn-state-evaluator-resource
 }
 
 
-/*# sourceMappingURL=main.9d6cd65a.chunk.css.map*/
+/*# sourceMappingURL=main.4071f9de.chunk.css.map*/
