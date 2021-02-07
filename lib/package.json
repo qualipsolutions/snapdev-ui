@@ -1,6 +1,6 @@
 {
   "name": "@snapdev-ui/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "private": false,
   "engines": {
@@ -11,7 +11,7 @@
   },
   "engineStrict": true,
   "preferGlobal": true,
-  "description": "Visualise the AWS Step Functions ASL JSON.",
+  "description": "React components for faster and consistent web development.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qualipsolutions/snapdev-ui.git"
