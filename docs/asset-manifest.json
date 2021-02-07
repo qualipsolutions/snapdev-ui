@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "./static/css/main.9d6cd65a.chunk.css",
-    "main.js": "./main.483d431a2d72a3fb6aca.bundle.js",
+    "main.js": "./main.ccb4ec1e55556db965eb.bundle.js",
     "main.css.map": "./static/css/main.9d6cd65a.chunk.css.map",
-    "main.js.map": "./main.483d431a2d72a3fb6aca.bundle.js.map",
-    "runtime~main.js": "./runtime~main.483d431a2d72a3fb6aca.bundle.js",
-    "runtime~main.js.map": "./runtime~main.483d431a2d72a3fb6aca.bundle.js.map",
-    "vendors~main.css": "./static/css/vendors~main.3666443d.chunk.css",
-    "vendors~main.js": "./vendors~main.483d431a2d72a3fb6aca.bundle.js",
-    "vendors~main.css.map": "./static/css/vendors~main.3666443d.chunk.css.map",
-    "vendors~main.js.map": "./vendors~main.483d431a2d72a3fb6aca.bundle.js.map",
+    "main.js.map": "./main.ccb4ec1e55556db965eb.bundle.js.map",
+    "runtime~main.js": "./runtime~main.ccb4ec1e55556db965eb.bundle.js",
+    "runtime~main.js.map": "./runtime~main.ccb4ec1e55556db965eb.bundle.js.map",
+    "vendors~main.css": "./static/css/vendors~main.278c7d28.chunk.css",
+    "vendors~main.js": "./vendors~main.ccb4ec1e55556db965eb.bundle.js",
+    "vendors~main.css.map": "./static/css/vendors~main.278c7d28.chunk.css.map",
+    "vendors~main.js.map": "./vendors~main.ccb4ec1e55556db965eb.bundle.js.map",
     "iframe.html": "./iframe.html",
-    "vendors~main.483d431a2d72a3fb6aca.bundle.js.LICENSE.txt": "./vendors~main.483d431a2d72a3fb6aca.bundle.js.LICENSE.txt"
+    "vendors~main.ccb4ec1e55556db965eb.bundle.js.LICENSE.txt": "./vendors~main.ccb4ec1e55556db965eb.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.483d431a2d72a3fb6aca.bundle.js",
-    "static/css/vendors~main.3666443d.chunk.css",
-    "vendors~main.483d431a2d72a3fb6aca.bundle.js",
+    "runtime~main.ccb4ec1e55556db965eb.bundle.js",
+    "static/css/vendors~main.278c7d28.chunk.css",
+    "vendors~main.ccb4ec1e55556db965eb.bundle.js",
     "static/css/main.9d6cd65a.chunk.css",
-    "main.483d431a2d72a3fb6aca.bundle.js"
+    "main.ccb4ec1e55556db965eb.bundle.js"
   ]
 }

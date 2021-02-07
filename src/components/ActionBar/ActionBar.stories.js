@@ -4,7 +4,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import EditIcon from '@material-ui/icons/Edit';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import SaveIcon from '@material-ui/icons/Save';
-import React from 'react';
+import React, { useState } from 'react';
 import ActionBar from './ActionBar';
 
 export default {
@@ -12,7 +12,27 @@ export default {
   component: ActionBar,
 };
 
-const Template = (args) => <ActionBar {...args} />;
+const Template = (args) => {
+  const [processing, setProcessing] = useState(false);
+
+  const { buttons, ...rest } = args;
+
+  const handleActionClick = (button) => {
+    console.log({ button });
+    switch (button.id) {
+      case 'save': {
+        setProcessing(true);
+        setTimeout(() => {
+          setProcessing(false);
+        }, 3000);
+        break;
+      }
+      default:
+    }
+  };
+
+  return <ActionBar onClick={handleActionClick} buttons={buttons.map((b) => ({ ...b, processing }))} {...rest} />;
+};
 
 export const Basic = Template.bind({});
 Basic.args = {
@@ -166,23 +186,11 @@ export const ButtonSpinner = Template.bind({});
 ButtonSpinner.args = {
   buttons: [
     {
-      id: 'create',
-      label: 'Create',
-      color: 'primary',
-      icon: <AddIcon />,
-    },
-    {
-      id: 'edit',
-      label: 'Edit',
-      icon: <EditIcon />,
-    },
-    {
       id: 'save',
       label: 'Save',
       color: 'primary',
       variant: 'spinner',
-      submit: true,
-      processing: true,
+      processing: false,
       icon: <SaveIcon />,
     },
   ],
@@ -208,7 +216,6 @@ MenuSpinner.args = {
       label: 'Save',
       color: 'primary',
       variant: 'spinner',
-      submit: true,
       icon: <SaveIcon />,
     },
   ],
