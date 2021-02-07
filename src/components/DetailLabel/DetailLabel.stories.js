@@ -14,15 +14,15 @@ Basic.args = {
   text: 'Args Template Basic',
 };
 
-export const WithNoWrap = Template.bind({});
-WithNoWrap.args = {
+export const NoWrap = Template.bind({});
+NoWrap.args = {
   label: 'Story Type',
   text: 'Args Template',
   noWrap: false,
 };
 
-export const WithWrap = Template.bind({});
-WithWrap.args = {
+export const Wrap = Template.bind({});
+Wrap.args = {
   label: 'Story Type',
   text: 'Args Template',
   noWrap: true,

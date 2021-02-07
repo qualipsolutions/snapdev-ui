@@ -20,8 +20,8 @@ Basic.args = {
   ),
 };
 
-export const WithMinHeight = Template.bind({});
-WithMinHeight.args = {
+export const MinHeight = Template.bind({});
+MinHeight.args = {
   ...Basic.args,
   minHeight: 400,
 };

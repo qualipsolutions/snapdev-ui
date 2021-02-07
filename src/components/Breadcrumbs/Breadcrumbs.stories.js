@@ -17,8 +17,8 @@ Basic.args = {
   ],
 };
 
-export const WithNavigate = Template.bind({});
-WithNavigate.args = {
+export const Navigate = Template.bind({});
+Navigate.args = {
   links: [
     { title: 'Dashboard', link: '/dashboard' },
     { title: 'Workflows', link: '/workflow' },
@@ -28,8 +28,8 @@ WithNavigate.args = {
   onNavigate: (link) => alert('Navigation occured using the onNavigate function'),
 };
 
-export const WithNavigator = Template.bind({});
-WithNavigator.args = {
+export const Navigator = Template.bind({});
+Navigator.args = {
   links: [
     { title: 'Dashboard', link: '/dashboard' },
     { title: 'Workflows', link: '/workflow' },

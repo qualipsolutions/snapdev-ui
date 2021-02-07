@@ -38,8 +38,8 @@ Basic.args = {
   ],
 };
 
-export const WithIcons = Template.bind({});
-WithIcons.args = {
+export const Icons = Template.bind({});
+Icons.args = {
   buttons: [
     {
       id: 'create',

@@ -37,15 +37,15 @@ Info.args = {
   severity: 'info',
 };
 
-export const WithDismiss = Template.bind({});
-WithDismiss.args = {
+export const Dismiss = Template.bind({});
+Dismiss.args = {
   message: 'I can be closed',
   severity: 'info',
   onClose: () => {},
 };
 
-export const WithTitle = Template.bind({});
-WithTitle.args = {
+export const Title = Template.bind({});
+Title.args = {
   message: 'Check out my title',
   severity: 'info',
   title: 'Info',

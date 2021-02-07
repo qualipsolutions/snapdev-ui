@@ -13,37 +13,37 @@ Basic.args = {
   label: 'First Name',
 };
 
-export const WithPlaceholder = Template.bind({});
-WithPlaceholder.args = {
+export const Placeholder = Template.bind({});
+Placeholder.args = {
   label: 'First Name',
   placeholder: 'Enter first name here',
 };
 
 export const FullWidth = Template.bind({});
 FullWidth.args = {
-  ...WithPlaceholder.args,
+  ...Placeholder.args,
   label: 'First Name',
   fullWidth: true,
 };
 
-export const WithHelperText = Template.bind({});
-WithHelperText.args = {
+export const HelperText = Template.bind({});
+HelperText.args = {
   ...FullWidth.args,
   helperText: 'Provide more details here',
 };
 
-export const WithValue = Template.bind({});
-WithValue.args = {
-  ...WithHelperText.args,
+export const Value = Template.bind({});
+Value.args = {
+  ...HelperText.args,
   helperText: 'Provide more details here',
   input: {
     value: 'Tshepo',
   },
 };
 
-export const WithError = Template.bind({});
-WithError.args = {
-  ...WithHelperText.args,
+export const Error = Template.bind({});
+Error.args = {
+  ...HelperText.args,
   helperText: 'Provide more details here',
   meta: {
     touched: true,
