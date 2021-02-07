@@ -1,0 +1,32 @@
+{
+  "name": "@snapdev-ui/core",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": false,
+  "engines": {
+    "node": ">=6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engineStrict": true,
+  "preferGlobal": true,
+  "description": "Visualise the AWS Step Functions ASL JSON.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qualipsolutions/snapdev-ui.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "material design",
+    "material-ui",
+    "snapdev-ui"
+  ],
+  "author": "Qualip Solutions",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qualipsolutions/snapdev-ui/issues"
+  },
+  "homepage": "https://github.com/qualipsolutions/snapdev-ui#readme"
+}
