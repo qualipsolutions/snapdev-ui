@@ -1,17 +1,16 @@
 import React from 'react';
-import Center from '../Center/Center';
 import DetailLabel from '../DetailLabel/DetailLabel';
-import Row from '../Row/Row';
+import Item from '../Item/Item';
 import Spacer from '../Spacer/Spacer';
 import Text from '../Text/Text';
-import Item from './Item';
+import Center from './Center';
 
 export default {
-  title: 'Layout/Item',
-  component: Row,
+  title: 'Layout/Center',
+  component: Center,
 };
 
-const Template = (args) => <Row {...args} />;
+const Template = (args) => <Center {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
@@ -26,7 +25,9 @@ Basic.args = {
       </Item>
       <Spacer>
         <Center>
-          <Text color="primary">Spacer</Text>
+          <Text style={{ backgroundColor: 'yellow' }} color="primary">
+            Item is centered
+          </Text>
         </Center>
       </Spacer>
       <Item>
