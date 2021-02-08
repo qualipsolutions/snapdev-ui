@@ -9,18 +9,15 @@ export { default as Alert } from './Alert/Alert';
 export { default as Breadcrumbs } from './Breadcrumbs/Breadcrumbs';
 // // Layout
 export { default as Center } from './Center/Center';
-export { default as CodeMirror } from './CodeMirror/CodeMirror';
 export { default as Column } from './Column/Column';
+export { default as Spacer } from './Spacer/Spacer';
+export { default as Item } from './Item/Item';
+export { default as Row } from './Row/Row';
 // // Form
 export { default as DataTable } from './DataTable/DataTable';
 export { default as DetailLabel } from './DetailLabel/DetailLabel';
-export { default as Item } from './Item/Item';
 // // Container
 export { default as Panel } from './Panel/Panel';
-export { default as Row } from './Row/Row';
-// // Code Editor
-export { default as SfnEditor } from './SfnEditor/SfnEditor';
-export { default as Spacer } from './Spacer/Spacer';
 // // Typography
 export { default as Text } from './Text/Text';
 export { default as TextField } from './TextField/TextField';
