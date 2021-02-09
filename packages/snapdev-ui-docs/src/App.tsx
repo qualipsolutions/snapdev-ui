@@ -1,9 +1,10 @@
+import { Text } from '@snapdev-ui/core';
 import React from 'react';
 
 function App() {
   return (
     <div>
-      <h1>This is the demo app</h1>
+      <Text>This component is working!!!</Text>
     </div>
   );
 }
