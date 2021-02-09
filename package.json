@@ -9,7 +9,9 @@
   "module": "dist/index.modern.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "microbundle-crl -o dist/ --format modern --css-modules false && cp dist/snapdev-ui.modern.css lib/index.css && cp dist/snapdev-ui.modern.js lib/index.js && cp dist/snapdev-ui.modern.js.map lib/index.js.map",
+    "build": "microbundle-crl --jsx React.createElement -o dist/ --format modern --css-modules false &&  yarn run copy-lib",
+    "copy-lib": "yarn run clean-lib && cp dist/snapdev-ui.modern.css lib/index.css && cp dist/snapdev-ui.modern.js lib/index.js && cp dist/snapdev-ui.modern.js.map lib/index.js.map",
+    "clean-lib" : "rm -f lib/index.js && rm -f lib/index.js.map && rm -f lib/index.css",
     "prepare": "run-s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
