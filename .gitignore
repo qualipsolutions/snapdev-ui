@@ -23,3 +23,27 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# The best pattern to follow is ignoring editor files in a global .gitignore configuration file.
+# However, in order to prevent issues, editor files are ignored here.
+.idea
+.vscode
+
+*.log
+.DS_STORE
+/.eslintcache
+/docs/.next
+/.nyc_output
+/coverage
+/docs/export
+/examples/**/.cache
+/packages/material-ui-codemod/lib
+/packages/material-ui-icons/material-icons/*
+/test/regressions/screenshots
+/test/selenium-output
+/tmp
+build
+node_modules
+package-lock.json
+size-snapshot.json
