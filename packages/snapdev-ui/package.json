@@ -8,8 +8,7 @@
     "react",
     "material-ui",
     "snapdev-ui",
-    "material",
-    "design"
+    "material design"
   ],
   "repository": {
     "type": "git",
