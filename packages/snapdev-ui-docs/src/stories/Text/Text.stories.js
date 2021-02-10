@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text } from '@snapdev-ui/core';
+// import { Text } from '@snapdev-ui/core';
+import Text from '@material-ui/core/Typography';
 
 export default {
   title: 'Typography/Text',

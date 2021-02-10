@@ -10,6 +10,7 @@
     "clean": "rimraf -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn run build",
+    "publish": "lerna publish",
     "test": "yarn run build",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public -o ./docs && cp ./docs/index.html ./docs/404.html"

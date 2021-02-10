@@ -20,8 +20,7 @@
     "url": "https://github.com/qualipsolutions/snapdev-ui/issues"
   },
   "homepage": "https://github.com/qualipsolutions/snapdev-ui",
-  "main": "dist/index",
-  "types": "dist/index",
+  "main": "src/index",
   "scripts": {
     "build": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired build",
     "build--": "yarn run clean && yarn run compile",
