@@ -27,14 +27,12 @@
     "build:esm": "node ../../scripts/build esm",
     "build:es": "node ../../scripts/build es",
     "build:copy-files": "node ../../scripts/copy-files.js",
-    "build--": "yarn run clean && yarn run compile",
     "clean": "rimraf -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "yarn run build",
     "test": "yarn run build",
     "start": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public -o ./docs && cp ./docs/index.html ./docs/404.html",
-    "release": "yarn build && npm publish build --tag latest"
+    "publish": "yarn build && npm publish build --tag latest"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.11.3",
