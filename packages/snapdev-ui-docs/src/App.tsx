@@ -4,7 +4,8 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <Text>This component is working!!!</Text>
+      <Text variant="h3">Component Type</Text>
+      <Text variant="h5">Text component</Text>
     </div>
   );
 }
