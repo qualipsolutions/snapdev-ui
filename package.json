@@ -13,7 +13,9 @@
     "clean": "lerna run clean",
     "build": "lerna run build",
     "pub": "lerna publish",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "new-version": "lerna version conventional-commits yes",
+    "diff": "lerna diff"
   },
   "devDependencies": {
     "lerna": "~3.22.1",
@@ -26,13 +28,10 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-
     "eslint": "^7.19.0",
-
     "prettier": "^2.1.2",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-plugin-html": "^6.1.0",
@@ -40,13 +39,10 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-
     "@octokit/core": "^3.2.5",
-
     "cross-env": "~7.0.2",
     "react-app-rewired": "~2.1.6",
     "tsconfig-paths-webpack-plugin": "~3.2.0"
-
   },
   "dependencies": {
     "react": "^17.0.1",
