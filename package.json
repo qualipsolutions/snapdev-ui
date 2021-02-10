@@ -12,7 +12,6 @@
     "docs": "doctoc --title '**Table of content**' README.md",
     "clean": "lerna run clean",
     "build": "lerna run build",
-    "pub": "lerna publish",
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commits",
     "diff": "lerna diff",
