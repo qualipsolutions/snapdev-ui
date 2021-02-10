@@ -1,5 +1,5 @@
-import { Text } from "@snapdev-ui/core";
-import React from "react";
+import { Text } from '@snapdev-ui/core';
+import React from 'react';
 
 function App() {
   return (

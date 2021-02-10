@@ -1,7 +1,18 @@
 {
   "extends": ["react-app", "prettier"],
   "rules": {
-    "prettier/prettier" : "error"
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 100,
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-anonymous-default-export": 0
   },
   "plugins": ["prettier"]
 }
