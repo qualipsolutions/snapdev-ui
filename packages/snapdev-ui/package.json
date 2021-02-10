@@ -1,6 +1,6 @@
 {
   "name": "@snapdev-ui/core",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "private": false,
   "author": "Snapdev-UI Team",
   "description": "React component library for faster and consistent web development",
@@ -31,8 +31,9 @@
     "test": "yarn run build",
     "start": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public -o ./docs && cp ./docs/index.html ./docs/404.html",
-    "publish": "yarn build",
-    "publish:test": "yarn build && cd build && npm publish --dry-run"
+    "publish": "yarn build && cd build && npm publish",
+    "publish:test": "yarn build && cd build && npm publish --dry-run",
+    "pack": "yarn build && cd build && npm publish --dry-run"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.11.3",
