@@ -9,5 +9,6 @@
 /examples/preact/scripts
 /packages/babel-plugin-unwrap-createStyles/test/__fixtures__/
 /tmp
+dist
 build
 node_modules

@@ -44,6 +44,7 @@ yarn-error.log*
 /test/selenium-output
 /tmp
 build
+dist
 node_modules
 package-lock.json
 size-snapshot.json
