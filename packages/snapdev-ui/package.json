@@ -1,6 +1,6 @@
 {
   "name": "@snapdev-ui/core",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "private": false,
   "author": "Snapdev-UI Team",
   "description": "React component library for faster and consistent web development",
@@ -20,19 +20,19 @@
     "url": "https://github.com/qualipsolutions/snapdev-ui/issues"
   },
   "homepage": "https://github.com/qualipsolutions/snapdev-ui",
-  "main": "src/index",
   "scripts": {
-    "build": "yarn run clean && yarn build:cjs && yarn build:esm && yarn build:es && yarn build:copy-files",
     "build:cjs": "node ../../scripts/build cjs",
     "build:esm": "node ../../scripts/build esm",
     "build:es": "node ../../scripts/build es",
     "build:copy-files": "node ../../scripts/copy-files.js",
-    "clean": "rimraf -rf ./dist",
+    "build": "yarn build:cjs && yarn build:esm && yarn build:es && yarn build:copy-files",
+    "prebuild": "rimraf -rf ./build",
     "compile": "tsc -p tsconfig.build.json",
     "test": "yarn run build",
     "start": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public -o ./docs && cp ./docs/index.html ./docs/404.html",
-    "publish": "yarn build && npm publish build --tag latest"
+    "publish": "yarn build",
+    "publish:test": "yarn build && cd build && npm publish --dry-run"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.11.3",
@@ -66,5 +66,6 @@
   },
   "engines": {
     "node": ">=8.0.0"
-  }
+  },
+  "main": "src/index"
 }
