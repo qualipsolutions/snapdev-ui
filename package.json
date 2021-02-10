@@ -15,7 +15,8 @@
     "pub": "lerna publish",
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commits",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "storybook": "lerna run storybook --scope=@snapdev-ui/docs"
   },
   "devDependencies": {
     "lerna": "~3.22.1",
