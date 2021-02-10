@@ -121,7 +121,6 @@ async function run() {
       [
         // use enhanced readme from workspace root for `@snapdev-ui/core`
         packageData.name === '@snapdev-ui/core' ? '../../README.md' : './README.md',
-        '../../CHANGELOG.md',
         '../../LICENSE',
       ].map((file) => includeFileInBuild(file))
     );
