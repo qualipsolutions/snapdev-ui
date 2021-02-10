@@ -22,14 +22,19 @@
   "homepage": "https://github.com/qualipsolutions/snapdev-ui",
   "main": "src/index",
   "scripts": {
-    "build": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired build",
+    "build": "yarn run clean && yarn build:cjs && yarn build:esm && yarn build:es && yarn build:copy-files",
+    "build:cjs": "node ../../scripts/build cjs",
+    "build:esm": "node ../../scripts/build esm",
+    "build:es": "node ../../scripts/build es",
+    "build:copy-files": "node ../../scripts/copy-files.js",
     "build--": "yarn run clean && yarn run compile",
     "clean": "rimraf -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn run build",
     "test": "yarn run build",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public -o ./docs && cp ./docs/index.html ./docs/404.html"
+    "build-storybook": "build-storybook -s public -o ./docs && cp ./docs/index.html ./docs/404.html",
+    "release": "yarn build && npm publish build --tag latest"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.11.3",
