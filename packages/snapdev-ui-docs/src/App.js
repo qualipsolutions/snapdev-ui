@@ -3,7 +3,7 @@
 // import Spacer from '@snapdev-ui/core/Spacer';
 // import Item from '@snapdev-ui/core/Item';
 // import DataTable from '@snapdev-ui/core/DataTable';
-import {Text, Row, Spacer, Item, DataTable   } from '@snapdev-ui/core';
+import { Text, Row, Spacer, Item, DataTable } from '@snapdev-ui/core';
 
 import Paper from '@material-ui/core/Paper';
 
@@ -12,17 +12,21 @@ import React from 'react';
 function App() {
   return (
     <div style={{ padding: 10 }}>
-      <Text variant="h3">Components Overview</Text>
+      <Text>Components Overview2</Text>
       <br />
       <Paper style={{ padding: 20 }}>
         <Row>
           <Item>
             <br />
             <Text variant="subtitle1">Option1: Default import</Text>
-            <Text variant="body2">import Text from '@snapdev-ui/core/Text';</Text>
+            <Text variant="body2">
+              import Text from '@snapdev-ui/core/Text';
+            </Text>
             <br />
             <Text variant="subtitle1">Option2: Named import</Text>
-            <Text variant="body2">{"import { Text } from '@snapdev-ui/core';"}</Text>
+            <Text variant="body2">
+              {"import { Text } from '@snapdev-ui/core';"}
+            </Text>
           </Item>
           <Spacer />
           <Item>
