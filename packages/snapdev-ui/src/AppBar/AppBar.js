@@ -17,7 +17,6 @@ import Typography from '@material-ui/core/Typography';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import DeviceHubIcon from '@material-ui/icons/DeviceHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { useSelector } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,10 +24,6 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `1px solid ${theme.palette.divider}`,
     // backgroundColor: theme.palette.primary.main,
   },
-  // toolbar: {
-  //   flexWrap: 'wrap',
-  //   justifyContent: 'space-between',
-  // },
   grow: {
     flexGrow: 1,
   },
@@ -70,6 +65,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AppBar = (props) => {
+  const {
+    title,
+    isSignedIn,
+    user,
+    processing,
+    appName,
+    appIndex,
+    apps,
+  } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [drawerOpened, setDrawerOpened] = React.useState(false);
 
@@ -77,12 +81,12 @@ const AppBar = (props) => {
 
   const classes = useStyles();
 
-  const { isSignedIn, user, processing, app } = useSelector((state) => ({
-    isSignedIn: state.auth.isSignedIn,
-    user: state.auth.user,
-    processing: state.auth.processing,
-    app: state.app,
-  }));
+  // const { isSignedIn, user, processing, app } = useSelector((state) => ({
+  //   isSignedIn: state.auth.isSignedIn,
+  //   user: state.auth.user,
+  //   processing: state.auth.processing,
+  //   app: state.app,
+  // }));
 
   const toggleDrawer = (opened) => (event) => {
     if (
@@ -92,12 +96,6 @@ const AppBar = (props) => {
       return;
     }
     setDrawerOpened(opened);
-  };
-
-  const handleTabChange = (event, newValue) => {
-    if (props.handleTabChange) {
-      props.handleTabChange(`/${event.target.outerText}`);
-    }
   };
 
   const handleMenu = (event) => {
@@ -167,7 +165,7 @@ const AppBar = (props) => {
           noWrap
           onClick={navToHome}
         >
-          Snapflow
+          {title}
         </Typography>
 
         {isSignedIn ? (
@@ -180,7 +178,7 @@ const AppBar = (props) => {
               className={classes.serviceMenu}
               endIcon={<ExpandMoreIcon />}
             >
-              {app.appName}
+              {appName}
             </Button>
             <Drawer
               className={classes.drawer}
@@ -191,13 +189,13 @@ const AppBar = (props) => {
               <>
                 <br />
                 <Tabs
-                  value={app.appIndex}
+                  value={appIndex}
                   indicatorColor="primary"
                   textColor="primary"
                   variant="scrollable"
                   className={classes.tabs}
                 >
-                  {app.apps.map((i) => (
+                  {apps.map((i) => (
                     <LinkTab key={i.title} label={i.title} href={i.path} />
                   ))}
 
@@ -288,6 +286,13 @@ AppBar.propTypes = {
   handleTabChange: PropTypes.func,
   handleSignOut: PropTypes.func,
   handleSignIn: PropTypes.func,
+  title: PropTypes.string,
+  isSignedIn: PropTypes.bool,
+  user: PropTypes.object,
+  processing: PropTypes.bool,
+  appName: PropTypes.string,
+  appIndex: PropTypes.number,
+  apps: PropTypes.array,
 };
 
 export default AppBar;
