@@ -13,8 +13,10 @@ const useStyles = makeStyles((theme) => ({
   paperHeader: {
     minHeight: 2,
     padding: '1.3rem 2rem',
-    backgroundColor: '#fafafa',
-    borderBottom: '1px solid #eaeded',
+    // backgroundColor: '#fafafa',
+    backgroundColor: theme.palette.background.default,
+    // borderBottom: `1px solid #eaeded`,
+    borderBottom: `1px solid ${theme.palette.background.default}`,
     borderRadius: 0,
   },
   paperBody: {
