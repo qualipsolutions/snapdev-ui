@@ -45,3 +45,6 @@ export * from './Spacer';
 
 export { default as TextField } from './TextField';
 export * from './TextField';
+
+export { DarkTheme, LightTheme } from './Theme';
+export * from './Theme';

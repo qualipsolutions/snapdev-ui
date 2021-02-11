@@ -15,7 +15,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const TextField = (props) => {
-  const { input, label, helperText, fullWidth = false, meta, ...custom } = props;
+  const {
+    input,
+    label,
+    helperText,
+    fullWidth = false,
+    meta,
+    ...custom
+  } = props;
 
   const { touched, error } = meta || {};
 

@@ -12,9 +12,9 @@ import React from 'react';
 function App() {
   return (
     <div style={{ padding: 10 }}>
-      <Text>Components Overview2</Text>
-      <br />
       <Paper style={{ padding: 20 }}>
+        <Text variant="h3">Components</Text>
+        <br />
         <Row>
           <Item>
             <br />

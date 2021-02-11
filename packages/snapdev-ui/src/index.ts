@@ -12,3 +12,4 @@ export { default as Panel } from './Panel';
 export { default as Row } from './Row';
 export { default as Spacer } from './Spacer';
 export { default as TextField } from './TextField';
+export { DarkTheme, LightTheme } from './Theme';
