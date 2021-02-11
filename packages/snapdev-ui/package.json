@@ -29,7 +29,8 @@
     "prebuild": "rimraf -rf ./build",
     "compile": "tsc -p tsconfig.build.json",
     "test": "yarn run build",
-    "start": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
+    "start--": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
+    "start": "yarn build",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public -o ./docs && cp ./docs/index.html ./docs/404.html",
     "release": "yarn build && npm publish build --tag latest",
@@ -71,5 +72,5 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "main": "src/index"
+  "main": "build/index"
 }
