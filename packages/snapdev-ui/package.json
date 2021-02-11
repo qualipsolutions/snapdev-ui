@@ -44,7 +44,11 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "react": "^16.8.6 || ^17.0.0",
     "react-dom": "^16.8.6 || ^17.0.0",
-    "react-scripts": "4.0.2"
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
@@ -62,6 +66,10 @@
     "babel-loader": "^8.2.2",
     "cross-env": "~7.0.2",
     "react-app-rewired": "~2.1.6",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "tsconfig-paths-webpack-plugin": "~3.2.0",
     "typescript": "^4.1.2"
   },
@@ -72,5 +80,6 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "main": "build/index"
+  "main": "build/index",
+  "dependencies": {}
 }
