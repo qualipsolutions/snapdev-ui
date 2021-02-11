@@ -1,15 +1,21 @@
 # Snapdev-UI
 
-React components for faster and consistent web development.
+React component library for faster and consistent web development. This library is built as a wrapper for well known component libraries like Material-UI and CodeMirror.
 
-## Component Library
+The goal of the snapdev-ui library is to enforce a specific design system consistency across different projects.
 
-https://qualipsolutions.github.io/snapdev-ui
+## Installation
 
-## Add add package to another project
+Install the package in your project directory with:
+
+```sh
+// with npm
+npm install @snapdev-ui/core
+
+// with yarn
+yarn add @snapdev-ui/core
 ```
-// Add core package to the docs package 
 
-$ lerna add @snapdev-ui/core --scope=@snapdev-ui/docs
-```
+## Documentation
 
+[The documentation](https://qualipsolutions.github.io/snapdev-ui)
