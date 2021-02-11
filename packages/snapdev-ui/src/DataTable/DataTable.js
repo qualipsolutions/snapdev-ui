@@ -64,7 +64,9 @@ const TableHead = (props) => {
                 {headCell.label}
                 {orderBy === headCell.id ? (
                   <span className={classes.visuallyHidden}>
-                    {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                    {order === 'desc'
+                      ? 'sorted descending'
+                      : 'sorted ascending'}
                   </span>
                 ) : null}
               </TableSortLabel>
@@ -97,6 +99,9 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 750,
   },
   tabelRow: {
+    '& a': {
+      color: 'unset',
+    },
     '&.Mui-selected, &.Mui-selected td, &.Mui-selected th, &.Mui-selected th .MuiTypography-colorPrimary, &.Mui-selected:hover': {
       backgroundColor: '#3f51b5',
       color: '#fff',
@@ -127,7 +132,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DataTable = (props) => {
-  const { dataSource, orderByField, onSelectedRow, onDeselectedRow, navigator } = props;
+  const {
+    dataSource,
+    orderByField,
+    onSelectedRow,
+    onDeselectedRow,
+    navigator,
+  } = props;
 
   const classes = useStyles();
   const [order, setOrder] = React.useState('asc');
@@ -185,7 +196,8 @@ const DataTable = (props) => {
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
   const emptyRows =
-    rowsPerPage - Math.min(rowsPerPage, dataSource.rows.length - page * rowsPerPage);
+    rowsPerPage -
+    Math.min(rowsPerPage, dataSource.rows.length - page * rowsPerPage);
 
   return (
     <div className={classes.root}>
@@ -231,7 +243,12 @@ const DataTable = (props) => {
                         inputProps={{ 'aria-labelledby': labelId }}
                       />
                     </TableCell>
-                    <TableCell component="th" id={labelId} scope="row" padding="none">
+                    <TableCell
+                      component="th"
+                      id={labelId}
+                      scope="row"
+                      padding="none"
+                    >
                       <Link
                         onClick={(event) => {
                           event.preventDefault();

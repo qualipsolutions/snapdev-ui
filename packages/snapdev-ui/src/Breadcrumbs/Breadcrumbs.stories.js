@@ -25,7 +25,8 @@ Navigate.args = {
     { title: 'Create workflow' },
   ],
   // eslint-disable-next-line no-alert
-  onNavigate: (link) => alert('Navigation occured using the onNavigate function'),
+  onNavigate: (link) =>
+    alert('Navigation occured using the onNavigate function'),
 };
 
 export const Navigator = Template.bind({});

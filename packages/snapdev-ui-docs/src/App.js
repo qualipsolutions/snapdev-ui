@@ -31,6 +31,7 @@ function App() {
           <Spacer />
           <Item>
             <DataTable
+              orderByField="name"
               dataSource={{
                 head: [
                   {

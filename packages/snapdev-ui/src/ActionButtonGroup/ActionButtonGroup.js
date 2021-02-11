@@ -115,7 +115,9 @@ const ActionButtonGroup = (props) => {
           >
             {label}
           </Button>
-          {processing && <CircularProgress size={24} className={classes.circularProgress} />}
+          {processing && (
+            <CircularProgress size={24} className={classes.circularProgress} />
+          )}
         </div>
       );
     }

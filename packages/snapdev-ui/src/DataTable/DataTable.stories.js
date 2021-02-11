@@ -11,6 +11,7 @@ const Template = (args) => <DataTable {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
+  orderByField: 'name',
   dataSource: {
     head: [
       {

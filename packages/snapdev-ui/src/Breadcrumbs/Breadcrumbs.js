@@ -19,7 +19,10 @@ const Breadcrumbs = (props) => {
   const { links, navigator, onNavigate } = props;
 
   return (
-    <MuiBreadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
+    <MuiBreadcrumbs
+      separator={<NavigateNextIcon fontSize="small" />}
+      aria-label="breadcrumb"
+    >
       {links.map(({ title, link }) => {
         if (link) {
           return (

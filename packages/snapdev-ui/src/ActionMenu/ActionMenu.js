@@ -94,7 +94,9 @@ const ActionMenu = (props) => {
             {button.icon ? (
               <ListItemIcon
                 classes={{
-                  root: !button.label ? classes.listItemIconOnlyRoot : classes.listItemIconRoot,
+                  root: !button.label
+                    ? classes.listItemIconOnlyRoot
+                    : classes.listItemIconRoot,
                 }}
                 key={button.id}
               >
@@ -103,7 +105,11 @@ const ActionMenu = (props) => {
             ) : (
               <></>
             )}
-            {button.label ? <ListItemText key={button.id} primary={button.label} /> : <></>}
+            {button.label ? (
+              <ListItemText key={button.id} primary={button.label} />
+            ) : (
+              <></>
+            )}
           </MenuItem>
         ))}
       </StyledMenu>
