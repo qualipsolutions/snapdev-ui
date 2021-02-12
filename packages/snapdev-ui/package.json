@@ -1,6 +1,6 @@
 {
   "name": "@snapdev-ui/core",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "private": false,
   "author": "Snapdev-UI Team",
   "description": "React component library for faster and consistent web development",
@@ -79,6 +79,5 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "main": "build/index",
-  "dependencies": {}
+  "main": "build/index"
 }

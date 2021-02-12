@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/qualipsolutions/snapdev-ui/compare/@snapdev-ui/core@0.0.13...@snapdev-ui/core@0.1.0) (2021-02-12)
+
+
+### Bug Fixes
+
+* Link panel colors to theme provider ([927cb62](https://github.com/qualipsolutions/snapdev-ui/commit/927cb62664efbf39aa3381d360444b957c27c02f))
+* Updated AppBar ([bab6646](https://github.com/qualipsolutions/snapdev-ui/commit/bab6646b9e85a6ed40550c4eb15745759deed3d5))
+* Updated theme component ([55a5ed7](https://github.com/qualipsolutions/snapdev-ui/commit/55a5ed7d5b418e62bde86b7cc088fd7bd901a10b))
+
+
+### Features
+
+* Added a theme switcher ([16f1de4](https://github.com/qualipsolutions/snapdev-ui/commit/16f1de4e99713bcc9afa6fbbf1dce5ea987b762b))
+* Updated styles ([e36862f](https://github.com/qualipsolutions/snapdev-ui/commit/e36862f1c3f8ff413795037af148750bc50c2526))
+
+
+
+
+
 ## [0.0.13](https://github.com/qualipsolutions/snapdev-ui/compare/@snapdev-ui/core@0.0.4...@snapdev-ui/core@0.0.13) (2021-02-11)
 
 
