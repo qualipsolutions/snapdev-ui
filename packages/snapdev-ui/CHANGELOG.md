@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/qualipsolutions/snapdev-ui/compare/@snapdev-ui/core@0.1.0...@snapdev-ui/core@0.1.1) (2021-02-12)
+
+
+### Bug Fixes
+
+* Updated components ([f6404c2](https://github.com/qualipsolutions/snapdev-ui/commit/f6404c2cfd43518cfde5c801932390c1679b8c96))
+
+
+
+
+
 # [0.1.0](https://github.com/qualipsolutions/snapdev-ui/compare/@snapdev-ui/core@0.0.13...@snapdev-ui/core@0.1.0) (2021-02-12)
 
 
