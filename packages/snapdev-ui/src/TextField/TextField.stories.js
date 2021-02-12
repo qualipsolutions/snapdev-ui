@@ -10,7 +10,9 @@ const Template = (args) => <TextField {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  label: 'First Name',
+  label: 'Workflow Name',
+  helperText:
+    'Alphanumeric characters, dashes, or underscores. i.e. my-business-process-workflow',
 };
 
 export const Placeholder = Template.bind({});

@@ -20,6 +20,8 @@ const Template = (args) => (
 
 export const Basic = Template.bind({});
 Basic.args = {
+  elevation: 6,
+  color: 'primary',
   title: 'Snapdev UI',
   isSignedIn: true,
   user: null,

@@ -6,6 +6,7 @@ import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   helperText: {
+    // color: 'rgba(0, 0, 0, 0.54)',
     fontWeight: 100,
     fontSize: '0.775rem',
   },

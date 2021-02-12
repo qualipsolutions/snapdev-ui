@@ -9,6 +9,12 @@ const useStyles = makeStyles((theme) =>
       '& > * + *': {
         marginTop: theme.spacing(2),
       },
+      '& .MuiLinearProgress-colorPrimary': {
+        backgroundColor: theme.palette.progress.background,
+      },
+      '& .MuiLinearProgress-barColorPrimary': {
+        backgroundColor: theme.palette.progress.indicator,
+      },
     },
   })
 );

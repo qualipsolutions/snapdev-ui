@@ -4,9 +4,17 @@ import React from 'react';
 import KnobTheme from '../src/Theme/ThemeKnob';
 import { withKnobs } from '@storybook/addon-knobs';
 
+import 'fontsource-roboto';
+
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-}
+  actions: { argTypesRegex: '^on[A-Z].*' },
+};
 
 addDecorator(withKnobs);
-addDecorator(story => (<KnobTheme><Paper style={{padding: 10}} elevation={0}>{story()}</Paper></KnobTheme>));
+addDecorator((story) => (
+  <KnobTheme>
+    <Paper style={{ padding: 10 }} elevation={0}>
+      {story()}
+    </Paper>
+  </KnobTheme>
+));

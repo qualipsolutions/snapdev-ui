@@ -21,7 +21,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    // borderBottom: `1px solid ${theme.palette.divider}`,
     // backgroundColor: theme.palette.primary.main,
   },
   grow: {
@@ -73,6 +73,9 @@ const AppBar = (props) => {
     appName,
     appIndex,
     apps,
+    position = 'static',
+    color = 'primary',
+    elevation = 0,
   } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [drawerOpened, setDrawerOpened] = React.useState(false);
@@ -151,9 +154,9 @@ const AppBar = (props) => {
 
   return (
     <MuiAppBar
-      position="fixed"
-      color="primary"
-      elevation={0}
+      position={position}
+      color={color}
+      elevation={elevation}
       className={classes.appBar}
     >
       <Toolbar className={classes.toolbar}>
@@ -161,7 +164,7 @@ const AppBar = (props) => {
         <Typography
           className={classes.title}
           variant="h6"
-          color="inherit"
+          // color="inherit"
           noWrap
           onClick={navToHome}
         >
@@ -190,8 +193,8 @@ const AppBar = (props) => {
                 <br />
                 <Tabs
                   value={appIndex}
-                  indicatorColor="primary"
-                  textColor="primary"
+                  indicatorColor="secondary"
+                  // textColor="primary"
                   variant="scrollable"
                   className={classes.tabs}
                 >
@@ -291,7 +294,10 @@ AppBar.propTypes = {
   user: PropTypes.object,
   processing: PropTypes.bool,
   appName: PropTypes.string,
+  position: PropTypes.string,
+  color: PropTypes.string,
   appIndex: PropTypes.number,
+  elevation: PropTypes.number,
   apps: PropTypes.array,
 };
 
