@@ -1,3 +1,23 @@
+import * as React from 'react';
+import { GridSpacing } from '@material-ui/core/Grid';
+import { OverridableStringUnion } from '@material-ui/types';
+
+export type Color = 'inherit' | 'primary' | 'secondary' | 'default';
+
+export type BreakpointDefaults = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', true>;
+export interface BreakpointOverrides {}
+
+export type Breakpoint = OverridableStringUnion<
+  BreakpointDefaults,
+  BreakpointOverrides
+>;
+export type BreakpointValues = { [key in Breakpoint]?: number };
+
+export interface StandardProps extends BreakpointValues {
+  style?: React.CSSProperties;
+  spacing?: GridSpacing;
+}
+
 export { default as Text } from './Text';
 export { default as ActionBar } from './ActionBar';
 export { default as ActionButtonGroup } from './ActionButtonGroup';
