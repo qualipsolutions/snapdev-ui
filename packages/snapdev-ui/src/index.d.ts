@@ -53,3 +53,6 @@ export * from './Theme';
 
 export { default as AppBar } from './AppBar';
 export * from './AppBar';
+
+export { default as Progress } from './Progress';
+export * from './Progress';
