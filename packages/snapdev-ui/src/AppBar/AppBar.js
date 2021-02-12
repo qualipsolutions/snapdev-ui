@@ -68,7 +68,7 @@ const AppBar = (props) => {
   const {
     title,
     isSignedIn,
-    user,
+    email,
     processing,
     appName,
     appIndex,
@@ -83,13 +83,6 @@ const AppBar = (props) => {
   const open = Boolean(anchorEl);
 
   const classes = useStyles();
-
-  // const { isSignedIn, user, processing, app } = useSelector((state) => ({
-  //   isSignedIn: state.auth.isSignedIn,
-  //   user: state.auth.user,
-  //   processing: state.auth.processing,
-  //   app: state.app,
-  // }));
 
   const toggleDrawer = (opened) => (event) => {
     if (
@@ -271,9 +264,7 @@ const AppBar = (props) => {
               open={open}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleProfile}>
-                {user ? user.email : ''}
-              </MenuItem>
+              <MenuItem onClick={handleProfile}>{email}</MenuItem>
               <MenuItem onClick={onSignInOrOut}>Sign Out</MenuItem>
             </Menu>
           </div>
@@ -291,7 +282,7 @@ AppBar.propTypes = {
   handleSignIn: PropTypes.func,
   title: PropTypes.string,
   isSignedIn: PropTypes.bool,
-  user: PropTypes.object,
+  email: PropTypes.string,
   processing: PropTypes.bool,
   appName: PropTypes.string,
   position: PropTypes.string,

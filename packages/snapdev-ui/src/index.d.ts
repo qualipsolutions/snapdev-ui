@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+export type Color = 'inherit' | 'primary' | 'secondary' | 'default';
+
 export interface StandardProps {
   style?: React.CSSProperties;
 }
@@ -48,3 +50,6 @@ export * from './TextField';
 
 export { DarkTheme, LightTheme } from './Theme';
 export * from './Theme';
+
+export { default as AppBar } from './AppBar';
+export * from './AppBar';
