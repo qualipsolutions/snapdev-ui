@@ -1,7 +1,11 @@
 const path = require('path');
 
-const errorCodesPath = path.resolve(__dirname, './docs/public/static/error-codes.json');
-const missingError = process.env.MUI_EXTRACT_ERROR_CODES === 'true' ? 'write' : 'annotate';
+const errorCodesPath = path.resolve(
+  __dirname,
+  './docs/public/static/error-codes.json'
+);
+const missingError =
+  process.env.MUI_EXTRACT_ERROR_CODES === 'true' ? 'write' : 'annotate';
 
 let defaultPresets;
 
@@ -16,7 +20,9 @@ if (process.env.BABEL_ENV === 'es') {
       '@babel/preset-env',
       {
         bugfixes: true,
-        modules: ['esm', 'production-umd'].includes(process.env.BABEL_ENV) ? false : 'commonjs',
+        modules: ['esm', 'production-umd'].includes(process.env.BABEL_ENV)
+          ? false
+          : 'commonjs',
       },
     ],
   ];
@@ -39,7 +45,10 @@ const productionPlugins = [
 ];
 
 module.exports = {
-  presets: defaultPresets.concat(['@babel/preset-react', '@babel/preset-typescript']),
+  presets: defaultPresets.concat([
+    '@babel/preset-react',
+    '@babel/preset-typescript',
+  ]),
   plugins: [
     [
       'babel-plugin-macros',
@@ -88,16 +97,28 @@ module.exports = {
       ],
     },
     esm: {
-      plugins: [...productionPlugins, ['@babel/plugin-transform-runtime', { useESModules: true }]],
+      plugins: [
+        ...productionPlugins,
+        ['@babel/plugin-transform-runtime', { useESModules: true }],
+      ],
     },
     es: {
-      plugins: [...productionPlugins, ['@babel/plugin-transform-runtime', { useESModules: true }]],
+      plugins: [
+        ...productionPlugins,
+        ['@babel/plugin-transform-runtime', { useESModules: true }],
+      ],
     },
     production: {
-      plugins: [...productionPlugins, ['@babel/plugin-transform-runtime', { useESModules: true }]],
+      plugins: [
+        ...productionPlugins,
+        ['@babel/plugin-transform-runtime', { useESModules: true }],
+      ],
     },
     'production-umd': {
-      plugins: [...productionPlugins, ['@babel/plugin-transform-runtime', { useESModules: true }]],
+      plugins: [
+        ...productionPlugins,
+        ['@babel/plugin-transform-runtime', { useESModules: true }],
+      ],
     },
     test: {
       sourceMaps: 'both',

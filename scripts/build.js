@@ -19,7 +19,9 @@ async function run(argv) {
 
   if (validBundles.indexOf(bundle) === -1) {
     throw new TypeError(
-      `Unrecognized bundle '${bundle}'. Did you mean one of "${validBundles.join('", "')}"?`
+      `Unrecognized bundle '${bundle}'. Did you mean one of "${validBundles.join(
+        '", "'
+      )}"?`
     );
   }
 

@@ -11,7 +11,9 @@ module.exports = (config) => {
 
   // Let Babel compile outside of src/.
   const oneOfRule = config.module.rules.find((rule) => rule.oneOf);
-  const tsRule = oneOfRule.oneOf.find((rule) => rule.test.toString().includes('ts|tsx'));
+  const tsRule = oneOfRule.oneOf.find((rule) =>
+    rule.test.toString().includes('ts|tsx')
+  );
   tsRule.include = undefined;
   tsRule.exclude = /node_modules/;
 

@@ -25,7 +25,9 @@ async function includeFileInBuild(file) {
  * @param {string} rootDir
  */
 async function createModulePackages({ from, to }) {
-  const directoryPackages = glob.sync('*/index.js', { cwd: from }).map(path.dirname);
+  const directoryPackages = glob
+    .sync('*/index.js', { cwd: from })
+    .map(path.dirname);
 
   await Promise.all(
     directoryPackages.map(async (directoryPackage) => {
@@ -57,15 +59,24 @@ async function typescriptCopy({ from, to }) {
   }
 
   const files = glob.sync('**/*.d.ts', { cwd: from });
-  const cmds = files.map((file) => fse.copy(path.resolve(from, file), path.resolve(to, file)));
+  const cmds = files.map((file) =>
+    fse.copy(path.resolve(from, file), path.resolve(to, file))
+  );
   return Promise.all(cmds);
 }
 
 async function createPackageFile() {
-  const packageData = await fse.readFile(path.resolve(packagePath, './package.json'), 'utf8');
-  const { nyc, scripts, devDependencies, workspaces, ...packageDataOther } = JSON.parse(
-    packageData
+  const packageData = await fse.readFile(
+    path.resolve(packagePath, './package.json'),
+    'utf8'
   );
+  const {
+    nyc,
+    scripts,
+    devDependencies,
+    workspaces,
+    ...packageDataOther
+  } = JSON.parse(packageData);
   const newPackageData = {
     ...packageDataOther,
     private: false,
@@ -75,7 +86,11 @@ async function createPackageFile() {
   };
   const targetPath = path.resolve(buildPath, './package.json');
 
-  await fse.writeFile(targetPath, JSON.stringify(newPackageData, null, 2), 'utf8');
+  await fse.writeFile(
+    targetPath,
+    JSON.stringify(newPackageData, null, 2),
+    'utf8'
+  );
   console.log(`Created package.json in ${targetPath}`);
 
   return newPackageData;
@@ -120,7 +135,9 @@ async function run() {
     await Promise.all(
       [
         // use enhanced readme from workspace root for `@snapdev-ui/core`
-        packageData.name === '@snapdev-ui/core' ? '../../README.md' : './README.md',
+        packageData.name === '@snapdev-ui/core'
+          ? '../../README.md'
+          : './README.md',
         '../../LICENSE',
       ].map((file) => includeFileInBuild(file))
     );

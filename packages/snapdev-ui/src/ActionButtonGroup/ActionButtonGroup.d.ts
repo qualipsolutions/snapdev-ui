@@ -5,4 +5,6 @@ export interface ActionButtonGroupProps extends StandardProps {
   children?: NonNullable<React.ReactNode>;
 }
 
-export default function ActionButtonGroup(props: ActionButtonGroupProps): JSX.Element;
+export default function ActionButtonGroup(
+  props: ActionButtonGroupProps
+): JSX.Element;
