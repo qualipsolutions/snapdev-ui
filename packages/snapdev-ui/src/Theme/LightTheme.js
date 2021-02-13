@@ -7,6 +7,10 @@ const LightTheme = (props) => {
   const defaultTheme = {
     palette: {
       type: 'light',
+      panel: {
+        head: '#fafafa',
+        body: '#fff',
+      },
       progress: {
         background: 'rgb(182, 188, 226)',
         indicator: '#3f51b5',

@@ -6,7 +6,7 @@ import React from 'react';
 const useStyles = makeStyles((theme) => ({
   panel: {
     padding: 0,
-    backgroundColor: '#fff',
+    // backgroundColor: '#fff',
     boxShadow: '0 1px 1px 0 rgba(0,28,36,.5)',
     borderRadius: 0,
   },
@@ -14,12 +14,13 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 2,
     padding: '1.3rem 2rem',
     // backgroundColor: '#fafafa',
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: theme.palette.panel.head,
     // borderBottom: `1px solid #eaeded`,
-    borderBottom: `1px solid ${theme.palette.background.default}`,
+    borderBottom: `1px solid ${theme.palette.panel.head}`,
     borderRadius: 0,
   },
   paperBody: {
+    backgroundColor: theme.palette.panel.body,
     minHeight: 100,
     borderRadius: 0,
   },

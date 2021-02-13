@@ -8,11 +8,19 @@ const DarkTheme = (props) => {
     palette: {
       type: 'dark',
       primary: {
-        main: '#374046',
+        main: '#f6a821',
         // main: '#125ca6',
       },
       secondary: {
         main: '#cfd8dc',
+      },
+      background: {
+        paper: '#2a2d35',
+        default: '#24262d',
+      },
+      panel: {
+        head: '#30333b',
+        body: 'rgba(68, 70, 79, 0.5)',
       },
       progress: {
         background: '#374046',
