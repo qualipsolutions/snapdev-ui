@@ -145,7 +145,7 @@ const DataTable = (props) => {
   const [orderBy, setOrderBy] = React.useState(orderByField);
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(props.rowsPerPage || 5);
 
   const columns = dataSource.head.filter((i) => i.visible).map((i) => i.id);
   // console.log(columns);

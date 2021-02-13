@@ -1,5 +1,14 @@
 // import Text from '@snapdev-ui/core/Text';
-import { Text, Row, Box, Center, Item, DataTable } from '@snapdev-ui/core';
+import {
+  Text,
+  Row,
+  Column,
+  Box,
+  Center,
+  Item,
+  DataTable,
+  Panel,
+} from '@snapdev-ui/core';
 
 import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
@@ -10,11 +19,16 @@ function App() {
   return (
     <div style={{ padding: 10 }}>
       <Paper style={{ padding: 20 }}>
-        <Text variant="h3">Components</Text>
-        <br />
-        <Row spacing={3}>
+        <Column spacing={10}>
           <Item>
-            <br />
+            <Text variant="h3">Panel</Text>
+            <Panel
+              header={<Text variant="h5">Title</Text>}
+              body={<Text variant="h5">Body</Text>}
+            />
+          </Item>
+          <Item>
+            <Text variant="h3">Text</Text>
             <Text variant="subtitle1">Option1: Default import</Text>
             <Text variant="body2">
               import Text from '@snapdev-ui/core/Text';
@@ -25,18 +39,9 @@ function App() {
               {"import { Text } from '@snapdev-ui/core';"}
             </Text>
           </Item>
+
           <Item>
-            <Card elevation={5} style={{ minHeight: 250 }}>
-              <Box style={{ minHeight: 250, minWidth: 200 }}>
-                <Center>
-                  <Text style={{ backgroundColor: 'yellow' }} color="primary">
-                    Item is centered
-                  </Text>
-                </Center>
-              </Box>
-            </Card>
-          </Item>
-          <Item>
+            <Text variant="h3">Data Table</Text>
             <DataTable
               orderByField="name"
               dataSource={{
@@ -106,7 +111,21 @@ function App() {
               }}
             />
           </Item>
-        </Row>
+
+          <Item>
+            <Text variant="h3">Center</Text>
+            <br />
+            <Card elevation={5} style={{ minHeight: 250 }}>
+              <Box style={{ minHeight: 250, minWidth: 200 }}>
+                <Center>
+                  <Text style={{ backgroundColor: 'yellow' }} color="primary">
+                    Item is centered
+                  </Text>
+                </Center>
+              </Box>
+            </Card>
+          </Item>
+        </Column>
       </Paper>
     </div>
   );

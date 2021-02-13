@@ -8,6 +8,7 @@ export interface DataTableProps extends StandardProps {
   onSelectedRow?: () => void;
   onDeselectedRow?: () => void;
   navigator?: object;
+  rowsPerPage?: number;
 }
 
 export default function DataTable(props: DataTableProps): JSX.Element;
