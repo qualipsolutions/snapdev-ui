@@ -1,7 +1,8 @@
 // import Text from '@snapdev-ui/core/Text';
-import { Text, Row, Spacer, Item, DataTable } from '@snapdev-ui/core';
+import { Text, Row, Box, Center, Item, DataTable } from '@snapdev-ui/core';
 
 import Paper from '@material-ui/core/Paper';
+import Card from '@material-ui/core/Card';
 
 import React from 'react';
 
@@ -24,7 +25,17 @@ function App() {
               {"import { Text } from '@snapdev-ui/core';"}
             </Text>
           </Item>
-          <Spacer />
+          <Item>
+            <Card elevation={5} style={{ minHeight: 250 }}>
+              <Box style={{ minHeight: 250, minWidth: 200 }}>
+                <Center>
+                  <Text style={{ backgroundColor: 'yellow' }} color="primary">
+                    Item is centered
+                  </Text>
+                </Center>
+              </Box>
+            </Card>
+          </Item>
           <Item>
             <DataTable
               orderByField="name"

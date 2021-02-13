@@ -16,9 +16,25 @@ export type Variant =
   | 'button'
   | 'overline';
 
+export type Color =
+  | 'initial'
+  | 'inherit'
+  | 'primary'
+  | 'secondary'
+  | 'textPrimary'
+  | 'textSecondary'
+  | 'error';
+
+export type Display = 'initial' | 'block' | 'inline';
+
 export interface TextProps extends StandardProps {
   children?: NonNullable<React.ReactNode>;
   variant?: Variant;
+  color?: Color;
+  display?: Display;
+  gutterBottom?: boolean;
+  noWrap?: boolean;
+  paragraph?: boolean;
 }
 
 export default function Text(props: TextProps): JSX.Element;

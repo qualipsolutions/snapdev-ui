@@ -9,7 +9,7 @@ const Center = (props) => {
       direction="row"
       justify="center"
       alignItems="center"
-      style={{ ...style, height: '100%' }}
+      style={{ ...style, height: '100%', position: 'absolute' }}
       {...rest}
     >
       {children}

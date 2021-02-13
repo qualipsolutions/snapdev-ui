@@ -1,38 +1,40 @@
 import React from 'react';
-import DetailLabel from '../DetailLabel/DetailLabel';
-import Item from '../Item/Item';
-import Spacer from '../Spacer/Spacer';
-import Text from '../Text/Text';
+import Text from '../Text';
 import Center from './Center';
+import Card from '@material-ui/core/Card';
+import { makeStyles } from '@material-ui/core/styles';
+import Box from '../Box';
 
 export default {
   title: 'Layout/Center',
   component: Center,
 };
 
-const Template = (args) => <Center {...args} />;
+const useStyles = makeStyles({
+  root: {
+    minHeight: 250,
+  },
+});
+
+const Template = (args) => {
+  const classes = useStyles();
+  return <Card className={classes.root} {...args} />;
+};
 
 export const Basic = Template.bind({});
 Basic.args = {
+  elevation: 5,
   spacing: 2,
+  // style: {
+  //   position: 'relative',
+  // },
   children: (
-    <>
-      <Item>
-        <DetailLabel label="App Name" text="Snapdev UI" />
-      </Item>
-      <Item>
-        <DetailLabel label="Version" text="1.0.0" />
-      </Item>
-      <Spacer>
-        <Center>
-          <Text style={{ backgroundColor: 'yellow' }} color="primary">
-            Item is centered
-          </Text>
-        </Center>
-      </Spacer>
-      <Item>
-        <DetailLabel label="Author" text="Qualip Solutions" />
-      </Item>
-    </>
+    <Box style={{ minHeight: 250 }}>
+      <Center>
+        <Text style={{ backgroundColor: 'yellow' }} color="primary">
+          Item is centered
+        </Text>
+      </Center>
+    </Box>
   ),
 };
