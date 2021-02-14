@@ -95,7 +95,7 @@ const RenderCheckbox = (props: RenderCheckboxProps) => {
 const Component = () => {
   const classes = useStyles();
   return (
-    <Section title="Sign Up">
+    <Section title="Create Account" center>
       <Box p={2}>
         <TextField
           fullWidth
@@ -135,7 +135,7 @@ const Component = () => {
             disabled={false}
             style={{}}
           >
-            Sign In
+            Sign Up
           </Button>
         </div>
       </Box>
