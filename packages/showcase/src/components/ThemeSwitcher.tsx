@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 
@@ -9,9 +10,13 @@ const ThemeSwitcher = () => {
   const { useDarkTheme, switchTheme } = useContext(StyleContext);
 
   return (
-    <IconButton onClick={switchTheme}>
-      {useDarkTheme ? <Brightness7Icon /> : <Brightness4Icon />}
-    </IconButton>
+    <Tooltip
+      title={useDarkTheme ? 'Switch to light theme' : 'Switch to dark theme'}
+    >
+      <IconButton onClick={switchTheme}>
+        {useDarkTheme ? <Brightness7Icon /> : <Brightness4Icon />}
+      </IconButton>
+    </Tooltip>
   );
 };
 
