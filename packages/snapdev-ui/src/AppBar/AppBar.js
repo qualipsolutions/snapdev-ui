@@ -76,6 +76,7 @@ const AppBar = (props) => {
     position = 'static',
     color = 'primary',
     elevation = 0,
+    themeSwitcher,
   } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [drawerOpened, setDrawerOpened] = React.useState(false);
@@ -210,6 +211,8 @@ const AppBar = (props) => {
         )}
 
         <div className={classes.grow} />
+        {themeSwitcher ? themeSwitcher : <></>}
+
         {!isSignedIn ? (
           <Hidden xsDown>
             <Button

@@ -1,28 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
-import { DarkTheme, LightTheme } from '@snapdev-ui/core';
-import { ThemeProvider } from '@material-ui/core/styles';
-
-const theme = LightTheme({
-  theme: {
-    palette: {
-      // background: {
-      //   paper: '#292c34',
-      //   default: '#292c34',
-      // },
-      // panel: {
-      //   head: '#30333b',
-      //   body: '#3c3e47',
-      // },
-    },
-  },
-});
+import StyleProvider from './context/StyleProvider';
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
+  <StyleProvider>
     <App />
-  </ThemeProvider>,
+  </StyleProvider>,
   document.getElementById('root')
 );

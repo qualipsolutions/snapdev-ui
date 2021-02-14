@@ -5,7 +5,7 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 
 import { StyleContext } from '../context/StyleProvider';
 
-const Theme = () => {
+const ThemeSwitcher = () => {
   const { useDarkTheme, switchTheme } = useContext(StyleContext);
 
   return (
@@ -15,4 +15,4 @@ const Theme = () => {
   );
 };
 
-export default Theme;
+export default ThemeSwitcher;

@@ -16,6 +16,7 @@ export interface AppBarProps extends StandardProps {
   appIndex?: PropTypes.number;
   elevation?: PropTypes.number;
   apps?: PropTypes.array;
+  themeSwitcher?: JSX.Element;
 }
 
 export default function AppBar(props: AppBarProps): JSX.Element;
