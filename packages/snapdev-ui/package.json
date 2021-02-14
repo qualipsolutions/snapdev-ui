@@ -79,6 +79,7 @@
     "node": ">=8.0.0"
   },
   "main": "build/index",
+  "types": "build/index",
   "dependencies": {
     "@types/classnames": "^2.2.11",
     "lodash": "^4.17.20"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar } from '@snapdev-ui/core';
+// import AppBar from '@snapdev-ui/core/AppBar';
 
 const Component = () => (
   <AppBar

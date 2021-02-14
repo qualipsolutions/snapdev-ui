@@ -5,11 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "@snapdev-ui/core": ["./packages/snapdev-ui/src"],
-      "@snapdev-ui/core/*": ["./packages/snapdev-ui/src/*"],
-      "@snapdev-ui/docs": ["./packages/snapdev-ui-docs/src"],
-      "@snapdev-ui/docs/*": ["./packages/snapdev-ui-docs/src/*"],
-      "@snapdev-ui/editor": ["./packages/snapdev-ui-editor/src"],
-      "@snapdev-ui/editor/*": ["./packages/snapdev-ui-editor/src/*"]
+      "@snapdev-ui/core/*": ["./packages/snapdev-ui/src/*"]
     },
     "jsx": "react",
     "esModuleInterop": true,
