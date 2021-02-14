@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Section, Box, TextField, Text } from '@snapdev-ui/core';
+import {
+  Section,
+  Box,
+  TextField,
+  Text,
+  InputProps,
+  InputMetaProps,
+} from '@snapdev-ui/core';
 import Button from '@material-ui/core/Button';
 
 import classNames from 'classnames';
@@ -18,17 +25,25 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 4,
   },
   error: {
-    color: '#f44336',
+    color: theme.palette.error.main,
   },
 }));
 
-const RenderCheckbox = (props = {}) => {
+type RenderCheckboxProps = {
+  input?: InputProps;
+  label: string;
+  helperText?: string;
+  meta?: InputMetaProps;
+  classes: any;
+};
+
+const RenderCheckbox = (props: RenderCheckboxProps) => {
   const { input, label, helperText, meta, classes } = props;
   const { value, onChange } = input || {};
   const { touched, error } = meta || {};
   const [checked, setChecked] = useState(value || false);
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     // console.log(event);
     setChecked(event.target.checked);
     if (onChange) {
@@ -51,7 +66,7 @@ const RenderCheckbox = (props = {}) => {
               checked={!!checked}
               onChange={handleChange}
               color="primary"
-              fontSize="small"
+              size="small"
             />
           }
           label={

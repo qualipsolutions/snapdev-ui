@@ -80,6 +80,7 @@
   },
   "main": "build/index",
   "dependencies": {
+    "@types/classnames": "^2.2.11",
     "lodash": "^4.17.20"
   }
 }

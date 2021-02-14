@@ -16,6 +16,17 @@ export type BreakpointValues = { [key in Breakpoint]?: number };
 export interface StandardProps extends BreakpointValues {
   style?: React.CSSProperties;
   spacing?: GridSpacing;
+  className?: string;
+}
+
+export interface InputProps {
+  value?: string | boolean;
+  onChange?: (value: string | boolean) => void;
+}
+
+export interface InputMetaProps {
+  touched?: boolean;
+  error?: string;
 }
 
 export { default as Section } from './Section';
