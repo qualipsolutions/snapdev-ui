@@ -204,7 +204,7 @@ const App = () => {
 
               <Item>
                 <Section title="Center">
-                  <Box style={{ minHeight: 250, minWidth: 100 }}>
+                  <Box style={{ minHeight: 250 }}>
                     <Center>
                       <Text
                         style={{ backgroundColor: 'yellow' }}

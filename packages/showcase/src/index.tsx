@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import { DarkTheme } from '@snapdev-ui/core';
+import { DarkTheme, LightTheme } from '@snapdev-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
 
 const theme = DarkTheme({
