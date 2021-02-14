@@ -16,4 +16,7 @@ release: newversion
 dev:
 	cd packages/showcase && yarn start
 
+storybook:
+	cd packages/snapdev-ui && yarn storybook
+
 

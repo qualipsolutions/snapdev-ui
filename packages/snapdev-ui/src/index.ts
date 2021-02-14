@@ -18,6 +18,7 @@ export interface StandardProps extends BreakpointValues {
   spacing?: GridSpacing;
 }
 
+export { default as Section } from './Section';
 export { default as Box } from './Box';
 export { default as Text } from './Text';
 export { default as ActionBar } from './ActionBar';

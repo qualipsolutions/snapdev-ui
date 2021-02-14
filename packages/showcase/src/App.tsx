@@ -1,6 +1,5 @@
 // import Text from '@snapdev-ui/core/Text';
 import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
@@ -11,6 +10,7 @@ import {
   Item,
   Panel,
   Text,
+  Section,
 } from '@snapdev-ui/core';
 import { createBrowserHistory } from 'history';
 import React from 'react';
@@ -31,21 +31,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-type SectionProps = {
-  title: string;
-  children: React.ReactNode;
-};
-const Section = (props: SectionProps) => {
-  const { title, children } = props;
-  return (
-    <Paper style={{ padding: 20 }}>
-      <Text variant="h6">{title}</Text>
-      <br />
-      {children}
-    </Paper>
-  );
-};
 
 const App = () => {
   useStyles();
