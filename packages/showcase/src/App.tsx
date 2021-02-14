@@ -10,6 +10,7 @@ import Text from './components/Text';
 import Panel from './components/Panel';
 import DataTable from './components/DataTable';
 import Center from './components/Center';
+import Buttons from './components/Buttons';
 
 const history = createBrowserHistory();
 
@@ -38,6 +39,9 @@ const App = () => {
         <Container maxWidth="lg">
           <div style={{ paddingTop: '8rem' }}>
             <Column spacing={10}>
+              <Item>
+                <Buttons />
+              </Item>
               <Item>
                 <Panel />
               </Item>
