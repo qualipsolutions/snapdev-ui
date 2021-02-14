@@ -11,6 +11,7 @@ import Panel from './components/Panel';
 import DataTable from './components/DataTable';
 import Center from './components/Center';
 import Buttons from './components/Buttons';
+import SignUp from './components/SignUp';
 
 const history = createBrowserHistory();
 
@@ -36,9 +37,12 @@ const App = () => {
       <Router history={history}>
         <AppBar />
 
-        <Container maxWidth="lg">
+        <Container maxWidth="md">
           <div style={{ paddingTop: '8rem' }}>
             <Column spacing={10}>
+              <Item>
+                <SignUp />
+              </Item>
               <Item>
                 <Buttons />
               </Item>

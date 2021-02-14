@@ -3,7 +3,7 @@ import { Section, Box } from '@snapdev-ui/core';
 
 const Component = () => (
   <Section title="Section">
-    <Box p={10}></Box>
+    <Box p={2}></Box>
   </Section>
 );
 

@@ -72,7 +72,7 @@ const AppBar = (props) => {
     processing,
     appName,
     appIndex,
-    apps,
+    apps = [],
     position = 'static',
     color = 'primary',
     elevation = 0,
@@ -108,6 +108,7 @@ const AppBar = (props) => {
 
   const onSignInOrOut = () => {
     if (isSignedIn) {
+      handleClose();
       if (props.handleSignOut) {
         props.handleSignOut();
       }

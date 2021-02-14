@@ -6,12 +6,12 @@ import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   helperText: {
-    // color: 'rgba(0, 0, 0, 0.54)',
+    color: theme.palette.text.hint,
     fontWeight: 100,
     fontSize: '0.775rem',
   },
   error: {
-    color: '#f44336',
+    color: theme.palette.error.main,
   },
 }));
 

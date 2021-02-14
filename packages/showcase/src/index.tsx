@@ -5,7 +5,7 @@ import App from './App';
 import { DarkTheme, LightTheme } from '@snapdev-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
 
-const theme = DarkTheme({
+const theme = LightTheme({
   theme: {
     palette: {
       // background: {
