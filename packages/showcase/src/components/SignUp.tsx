@@ -56,7 +56,6 @@ const RenderCheckbox = (props: RenderCheckboxProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
-  console.log('Render checkbox: ', checked);
   return (
     <FormControl error={error !== undefined} component="fieldset">
       <FormGroup>
