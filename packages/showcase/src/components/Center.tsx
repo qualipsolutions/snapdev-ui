@@ -5,8 +5,8 @@ const Component = () => (
   <Section title="Center">
     <Box style={{ minHeight: 250 }}>
       <Center>
-        <Text style={{ backgroundColor: 'yellow' }} color="primary">
-          Item is centered
+        <Text style={{ backgroundColor: 'yellow', color: '#000', padding: 10 }}>
+          Box is centered
         </Text>
       </Center>
     </Box>
