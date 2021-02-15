@@ -19,4 +19,6 @@ dev:
 storybook:
 	cd packages/snapdev-ui && yarn storybook
 
+build-docs:
+	cd packages/snapdev-ui && yarn build:docs
 
