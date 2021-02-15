@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Checkbox = (props) => {
   const { input, label, helperText, meta } = props;
-  const { value, onChange } = input || {};
+  const { value = false, onChange } = input || {};
   const { touched, error } = meta || {};
-  const [checked, setChecked] = useState(value || false);
+  const [checked, setChecked] = useState(value);
 
   const classes = useStyles();
 
@@ -38,8 +38,7 @@ const Checkbox = (props) => {
   };
 
   useEffect(() => {
-    setChecked(checked);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setChecked(value);
   }, [value]);
 
   return (

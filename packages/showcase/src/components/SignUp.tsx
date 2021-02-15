@@ -1,98 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Section,
-  Box,
-  TextField,
-  Text,
-  InputProps,
-  InputMetaProps,
-} from '@snapdev-ui/core';
+import React from 'react';
+import { Section, Box, TextField, Checkbox } from '@snapdev-ui/core';
 import Button from '@material-ui/core/Button';
 
-import classNames from 'classnames';
-import { makeStyles } from '@material-ui/core/styles';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormHelperText from '@material-ui/core/FormHelperText';
-
-const useStyles = makeStyles((theme) => ({
-  helperText: {
-    color: theme.palette.text.hint,
-    fontWeight: 100,
-    fontSize: '0.775rem',
-    paddingTop: 4,
-  },
-  error: {
-    color: theme.palette.error.main,
-  },
-}));
-
-type RenderCheckboxProps = {
-  input?: InputProps;
-  label: string;
-  helperText?: string;
-  meta?: InputMetaProps;
-  classes: any;
-};
-
-const RenderCheckbox = (props: RenderCheckboxProps) => {
-  const { input, label, helperText, meta, classes } = props;
-  const { value, onChange } = input || {};
-  const { touched, error } = meta || {};
-  const [checked, setChecked] = useState(value || false);
-
-  const handleChange = (event: any) => {
-    // console.log(event);
-    setChecked(event.target.checked);
-    if (onChange) {
-      onChange(event.target.checked);
-    }
-  };
-
-  useEffect(() => {
-    setChecked(checked);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value]);
-
-  return (
-    <FormControl error={error !== undefined} component="fieldset">
-      <FormGroup>
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={!!checked}
-              onChange={handleChange}
-              color="primary"
-              size="small"
-            />
-          }
-          label={
-            <Text
-              variant="subtitle2"
-              style={{ fontWeight: 100, fontSize: '0.775rem' }}
-            >
-              {label}
-            </Text>
-          }
-        />
-      </FormGroup>
-      <FormHelperText>{touched ? error || null : null}</FormHelperText>
-      <Text
-        variant="body2"
-        className={classNames(classes.helperText, {
-          [classes.error]: touched && error !== undefined,
-        })}
-      >
-        {helperText}
-      </Text>
-    </FormControl>
-  );
-};
-
 const Component = () => {
-  const classes = useStyles();
   return (
     <Section title="Create Account" center>
       <Box p={2}>
@@ -112,10 +22,9 @@ const Component = () => {
           }}
         />
         <br />
-        <RenderCheckbox
+        <Checkbox
           label="I have read and agree to the Terms of Service, Privacy Policy, and Data Processing Terms."
-          input={{ value: true }}
-          classes={classes}
+          // input={{ value: true }}
           helperText="You must accept to continue"
           meta={{
             touched: true,

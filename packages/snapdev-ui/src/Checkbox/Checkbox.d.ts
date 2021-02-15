@@ -7,7 +7,6 @@ export interface CheckboxProps extends StandardProps {
   label: string;
   helperText?: string;
   meta?: InputMetaProps;
-  classes: any;
 }
 
 export default function Checkbox(props: CheckboxProps): JSX.Element;
