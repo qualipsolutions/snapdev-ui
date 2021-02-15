@@ -14,6 +14,7 @@ import Buttons from './components/Buttons';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import MenuList from './components/MenuList';
+import CardList from './components/CardList';
 
 const history = createBrowserHistory();
 
@@ -42,6 +43,9 @@ const App = () => {
         <Container maxWidth="md">
           <div style={{ paddingTop: '8rem' }}>
             <Column spacing={10}>
+              <Item>
+                <CardList />
+              </Item>
               <Item>
                 <MenuList />
               </Item>

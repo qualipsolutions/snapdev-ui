@@ -9,8 +9,6 @@ const DarkTheme = (props) => {
       type: 'dark',
       primary: {
         main: '#F8D12C',
-        // main: '#f6a821',
-        // main: '#125ca6',
       },
       secondary: {
         main: '#cfd8dc',
@@ -22,6 +20,9 @@ const DarkTheme = (props) => {
       panel: {
         head: '#30333b',
         body: 'rgba(68, 70, 79, 0.5)',
+      },
+      grey: {
+        900: '#24262d',
       },
       progress: {
         background: '#374046',
