@@ -29,6 +29,7 @@ export interface InputMetaProps {
   error?: string;
 }
 
+export { default as Checkbox } from './Checkbox';
 export { default as Section } from './Section';
 export { default as Box } from './Box';
 export { default as Text } from './Text';
