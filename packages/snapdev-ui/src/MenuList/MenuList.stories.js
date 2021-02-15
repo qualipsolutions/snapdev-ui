@@ -23,6 +23,30 @@ Basic.args = {
       icon: <InboxIcon />,
     },
     {
+      id: 'sent',
+      label: 'Sent Mail',
+      icon: <SendIcon />,
+    },
+    {
+      id: 'drafts',
+      label: 'Drafts',
+      icon: <DraftsIcon />,
+    },
+  ],
+};
+
+export const Divider = Template.bind({});
+Divider.args = {
+  onClick: (id) => {
+    console.log({ id });
+  },
+  buttons: [
+    {
+      id: 'inbox',
+      label: 'Inbox',
+      icon: <InboxIcon />,
+    },
+    {
       id: 'divider1',
       variant: 'divider',
     },
@@ -32,9 +56,45 @@ Basic.args = {
       icon: <SendIcon />,
     },
     {
+      id: 'divider2',
+      variant: 'divider',
+    },
+    {
       id: 'drafts',
       label: 'Drafts',
       icon: <DraftsIcon />,
+    },
+  ],
+};
+
+export const NoIcon = Template.bind({});
+NoIcon.args = {
+  onClick: (id) => {
+    console.log({ id });
+  },
+  buttons: [
+    {
+      id: 'inbox',
+      label: 'Inbox',
+      // icon: <InboxIcon />,
+    },
+    {
+      id: 'divider1',
+      variant: 'divider',
+    },
+    {
+      id: 'sent',
+      label: 'Sent Mail',
+      // icon: <SendIcon />,
+    },
+    {
+      id: 'divider2',
+      variant: 'divider',
+    },
+    {
+      id: 'drafts',
+      label: 'Drafts',
+      // icon: <DraftsIcon />,
     },
   ],
 };

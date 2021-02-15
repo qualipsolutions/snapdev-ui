@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { StandardProps } from '..';
+import { StandardProps, ActionButton } from '..';
 
 export interface ActionMenuProps extends StandardProps {
   children?: NonNullable<React.ReactNode>;
-  buttons: ActionButtonType[];
+  buttons: ActionButton[];
   onClick?: () => void;
 }
 
