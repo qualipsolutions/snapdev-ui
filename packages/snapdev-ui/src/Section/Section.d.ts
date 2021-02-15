@@ -5,6 +5,7 @@ export interface SectionProps extends StandardProps {
   children?: NonNullable<React.ReactNode>;
   title: string;
   center?: boolean;
+  spacing?: number;
 }
 
 export default function Section(props: SectionProps): JSX.Element;

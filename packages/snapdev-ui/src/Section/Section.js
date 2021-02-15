@@ -4,9 +4,9 @@ import Text from '../Text';
 import Center from '../Center';
 
 const Section = (props) => {
-  const { title, children, center = false } = props;
+  const { title, children, spacing = 20, center = false } = props;
   return (
-    <Paper style={{ padding: 20 }}>
+    <Paper style={{ padding: spacing }}>
       {center ? (
         <Center centerY={false}>
           <Text variant="h6">{title}</Text>
