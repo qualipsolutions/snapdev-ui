@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { StandardProps } from '..';
-
-export type GridJustification = 'flex-start' | 'center' | 'flex-end';
+import { StandardProps, ActionButtonType } from '..';
 
 export interface ActionButtonGroupProps extends StandardProps {
   children?: NonNullable<React.ReactNode>;
-  buttons: any[];
+  buttons: ActionButtonType[];
   onClick?: () => void;
   justify?: GridJustification;
 }

@@ -29,6 +29,21 @@ export interface InputMetaProps {
   error?: string;
 }
 
+export type GridJustification = 'flex-start' | 'center' | 'flex-end';
+
+export type ButtonVariant = 'icon-button' | 'icon-only' | 'spinner' | 'button';
+
+export type ActionButtonType = {
+  id: string;
+  submit?: boolean;
+  color?: Color;
+  disabled?: boolean;
+  icon?: React.ReactNode;
+  label?: string;
+  variant?: ButtonVariant;
+  processing?: boolean;
+};
+
 export { default as Checkbox } from './Checkbox';
 export * from './Checkbox';
 
