@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/qualipsolutions/snapdev-ui/compare/showcase@0.1.7...showcase@0.2.0) (2021-02-15)
+
+
+### Features
+
+* :package: Added MenuList component ([ea504de](https://github.com/qualipsolutions/snapdev-ui/commit/ea504de3815e0bdb778c42b8085954e2ab84a1f7))
+
+
+
+
+
 ## [0.1.7](https://github.com/qualipsolutions/snapdev-ui/compare/showcase@0.1.6...showcase@0.1.7) (2021-02-15)
 
 **Note:** Version bump only for package showcase

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/qualipsolutions/snapdev-ui/compare/@snapdev-ui/core@0.1.10...@snapdev-ui/core@0.2.0) (2021-02-15)
+
+
+### Features
+
+* :package: Added MenuList component ([ea504de](https://github.com/qualipsolutions/snapdev-ui/commit/ea504de3815e0bdb778c42b8085954e2ab84a1f7))
+* Updated TextField component ([83068cc](https://github.com/qualipsolutions/snapdev-ui/commit/83068ccf5cd11ec080d415e69424fab0b4df9d44))
+* Updated the ActionBar component ([a8f4d02](https://github.com/qualipsolutions/snapdev-ui/commit/a8f4d02443863459c12de03ff6f8a6b0817d5b0f))
+
+
+
+
+
 ## [0.1.10](https://github.com/qualipsolutions/snapdev-ui/compare/@snapdev-ui/core@0.1.9...@snapdev-ui/core@0.1.10) (2021-02-15)
 
 **Note:** Version bump only for package @snapdev-ui/core
