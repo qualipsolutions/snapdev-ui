@@ -31,7 +31,12 @@ export interface InputMetaProps {
 
 export type GridJustification = 'flex-start' | 'center' | 'flex-end';
 
-export type ButtonVariant = 'icon-button' | 'icon-only' | 'spinner' | 'button';
+export type ButtonVariant =
+  | 'icon-button'
+  | 'icon-only'
+  | 'spinner'
+  | 'button'
+  | 'divider';
 
 export type ActionButtonType = {
   id: string;
@@ -43,6 +48,9 @@ export type ActionButtonType = {
   variant?: ButtonVariant;
   processing?: boolean;
 };
+
+export { default as MenuList } from './MenuList';
+export * from './MenuList';
 
 export { default as Checkbox } from './Checkbox';
 export * from './Checkbox';
