@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/qualipsolutions/snapdev-ui/compare/showcase@0.2.0...showcase@0.3.0) (2021-02-15)
+
+
+### Features
+
+* :package: Added CardList component ([fe25438](https://github.com/qualipsolutions/snapdev-ui/commit/fe25438151b0333d1a6cd2a078a0656d0377875e))
+
+
+
+
+
 # [0.2.0](https://github.com/qualipsolutions/snapdev-ui/compare/showcase@0.1.7...showcase@0.2.0) (2021-02-15)
 
 
