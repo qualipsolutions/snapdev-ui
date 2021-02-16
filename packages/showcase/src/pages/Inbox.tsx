@@ -1,45 +1,155 @@
-import Container from '@material-ui/core/Container';
-import { Column, Item, Row, Text } from '@snapdev-ui/core';
-import MenuList from '../components/MenuList';
-import CardList from '../components/CardList';
+import {
+  Section,
+  MenuList,
+  Item,
+  Row,
+  DataTable,
+  Breadcrumbs,
+} from '@snapdev-ui/core';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 export interface ComponentsProps {}
 
 const Components: React.FunctionComponent<ComponentsProps> = () => {
   return (
-    <div style={{ paddingTop: '8rem' }}>
-      {/* <Row stretch heightOffset="8.1rem" style={{ backgroundColor: 'yellow' }}>
-        <Item xs={12} sm={6} md={2} style={{ backgroundColor: 'green' }}>
-          
-          <Column spacing={10}>
-            <Item>
-              <CardList />
-            </Item>
-            <Item>
-              <MenuList />
-            </Item>
-          </Column>
-         
+    <div
+      style={{ paddingTop: '6rem', paddingLeft: '1rem', paddingRight: '1rem' }}
+    >
+      <Breadcrumbs
+        links={[
+          {
+            link: '/dashboard',
+            title: 'Dashboard',
+          },
+          {
+            link: '/workflow',
+            title: 'Workflows',
+          },
+          {
+            title: 'Create workflow',
+          },
+        ]}
+      />
+      <br />
+      <br />
+      <Row stretch heightOffset="10rem" spacing={2}>
+        <Item xs={12} sm={6} md={2} style={{ backgroundColor: 'transparent' }}>
+          <Section spacing={0}>
+            {/* <Box> */}
+            <MenuList
+              onClick={(id) => {
+                console.log({ id });
+              }}
+              buttons={[
+                {
+                  id: 'inbox',
+                  label: 'Inbox',
+                  icon: <InboxIcon />,
+                },
+                {
+                  id: 'divider1',
+                  variant: 'divider',
+                },
+                {
+                  id: 'sent',
+                  label: 'Review',
+                  icon: <SendIcon />,
+                },
+                {
+                  id: 'approval',
+                  label: 'Store Approval',
+                  icon: <DraftsIcon />,
+                },
+                {
+                  id: 'divider2',
+                  variant: 'divider',
+                },
+                {
+                  id: 'reject',
+                  label: 'Rejected',
+                  icon: <DeleteIcon />,
+                },
+              ]}
+            />
+            {/* </Box> */}
+          </Section>
         </Item>
-        <Item xs={12} sm={6} md={2} style={{ backgroundColor: 'grey' }}></Item>
-        <Item xs={12} sm={12} md={8} style={{ backgroundColor: 'red' }}></Item>
-      </Row> */}
-
-      <Column
-        stretch
-        heightOffset="8.1rem"
-        style={{ backgroundColor: 'yellow', height: 300 }}
-      >
-        <Item stretch style={{ backgroundColor: 'green' }}>
-          <Text variant="body1">Item1</Text>
+        <Item xs={12} sm={6} md={10}>
+          <Section spacing={0}>
+            <DataTable
+              orderByField="name"
+              dataSource={{
+                head: [
+                  {
+                    disablePadding: true,
+                    id: 'name',
+                    label: 'Name',
+                    numeric: false,
+                    visible: true,
+                  },
+                  {
+                    disablePadding: true,
+                    id: 'href',
+                    label: 'href',
+                    numeric: false,
+                    visible: false,
+                  },
+                  {
+                    disablePadding: false,
+                    id: 'status',
+                    label: 'Status',
+                    numeric: false,
+                    visible: true,
+                  },
+                  {
+                    disablePadding: false,
+                    id: 'version',
+                    label: 'Version',
+                    numeric: false,
+                    visible: true,
+                  },
+                  {
+                    disablePadding: false,
+                    id: 'createdAt',
+                    label: 'Date Created',
+                    numeric: false,
+                    visible: true,
+                  },
+                ],
+                rows: [
+                  {
+                    createdAt: '2021-01-01T06:05:44.189Z',
+                    href: '/workflow/view/5feebbb88c914b00084c2f5f',
+                    id: '5feebbb88c914b00084c2f5f',
+                    name: 'Download manager',
+                    status: 'Active',
+                    version: 15,
+                  },
+                  {
+                    createdAt: '2021-02-01T22:52:33.896Z',
+                    href: '/workflow/view/601886314432ed00090712d9',
+                    id: '601886314432ed00090712d9',
+                    name: 'Product delivery',
+                    status: 'Active',
+                    version: 7,
+                  },
+                  {
+                    createdAt: '2021-02-03T11:25:24.890Z',
+                    href: '/workflow/view/601a88243ade6800084e0407',
+                    id: '601a88243ade6800084e0407',
+                    name: 'Pizza Order',
+                    status: 'Active',
+                    version: 1,
+                  },
+                ],
+              }}
+            />
+          </Section>
         </Item>
-        <Item stretch style={{ backgroundColor: 'grey' }}>
-          <Text variant="body1">Item2</Text>
-        </Item>
-        <Item stretch style={{ backgroundColor: 'red' }}>
-          <Text variant="body1">Item3</Text>
-        </Item>
-      </Column>
+      </Row>
     </div>
   );
 };

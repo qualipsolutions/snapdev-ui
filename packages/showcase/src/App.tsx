@@ -12,13 +12,20 @@ const InboxPage = lazy(() => import('./pages/Inbox'));
 const useStyles = makeStyles((theme) => ({
   '@global': {
     html: {
+      WebkitFontSmoothing: 'auto',
       margin: 0,
       padding: 0,
+      height: '100%',
+      overflow: 'hidden',
+      position: 'relative',
     },
     body: {
       margin: 0,
       padding: 0,
       backgroundColor: theme.palette.background.default,
+      height: '100%',
+      overflow: 'auto',
+      position: 'relative',
     },
   },
 }));
