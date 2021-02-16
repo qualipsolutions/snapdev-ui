@@ -3,12 +3,12 @@ import { StandardProps, Color } from '..';
 
 export interface AppBarProps extends StandardProps {
   children?: NonNullable<React.ReactNode>;
-  handleTabChange?: (href) => void;
+  handleTabChange?: (href: string) => void;
   handleSignOut?: () => void;
   handleSignIn?: () => void;
   title?: string;
   isSignedIn?: boolean;
-  email?: string;
+  displayName?: string;
   processing?: boolean;
   appName?: string;
   position?: 'fixed' | 'absolute' | 'sticky' | 'static' | 'relative';

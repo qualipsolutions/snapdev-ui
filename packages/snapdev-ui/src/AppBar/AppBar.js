@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import MuiAppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Divider from '@material-ui/core/Divider';
 import { blue } from '@material-ui/core/colors';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
@@ -69,7 +69,7 @@ const AppBar = (props) => {
   const {
     title,
     isSignedIn,
-    email,
+    displayName,
     processing,
     appName,
     appIndex,
@@ -269,7 +269,10 @@ const AppBar = (props) => {
               open={open}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleProfile}>{email}</MenuItem>
+              <MenuItem disabled onClick={handleProfile}>
+                {displayName}
+              </MenuItem>
+              <Divider />
               <MenuItem onClick={onSignInOrOut}>Sign Out</MenuItem>
             </Menu>
           </div>
