@@ -16,15 +16,35 @@ Basic.args = {
   spacing: 2,
   children: (
     <>
-      <Item>
+      <Item style={{ backgroundColor: 'green' }}>
         <DetailLabel label="App Name" text="Snapdev UI" />
       </Item>
       <Spacer />
-      <Item>
+      <Item style={{ backgroundColor: 'grey' }}>
         <DetailLabel label="Version" text="1.0.0" />
       </Item>
       <Spacer />
-      <Item>
+      <Item style={{ backgroundColor: 'red' }}>
+        <DetailLabel label="Author" text="Qualip Solutions" />
+      </Item>
+    </>
+  ),
+};
+
+export const Stretch = Template.bind({});
+Stretch.args = {
+  stretch: true,
+  heightOffset: '50px',
+  style: { backgroundColor: 'yellow' },
+  children: (
+    <>
+      <Item xs={12} sm={6} md={2} style={{ backgroundColor: 'green' }}>
+        <DetailLabel label="App Name" text="Snapdev UI" />
+      </Item>
+      <Item xs={12} sm={6} md={2} style={{ backgroundColor: 'grey' }}>
+        <DetailLabel label="Version" text="1.0.0" />
+      </Item>
+      <Item xs={12} sm={12} md={8} style={{ backgroundColor: 'red' }}>
         <DetailLabel label="Author" text="Qualip Solutions" />
       </Item>
     </>
