@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/qualipsolutions/snapdev-ui/compare/showcase@0.3.0...showcase@0.4.0) (2021-02-16)
+
+
+### Features
+
+* Added routing ([ebd587b](https://github.com/qualipsolutions/snapdev-ui/commit/ebd587b76f02a96ec47c2ac60ce31ad78168ab15))
+* Added stretch props to Row, Column and Item components ([6258cf4](https://github.com/qualipsolutions/snapdev-ui/commit/6258cf4e39de33b33858e580ca5343b85cd8ea78))
+* Embeded the ThemeSwitcher toggle in the AppBar component ([d86d6b6](https://github.com/qualipsolutions/snapdev-ui/commit/d86d6b6f4965015da17f8e854f5a77fc3b10058f))
+* Moved ThemeSwitcher to component library ([1091cc6](https://github.com/qualipsolutions/snapdev-ui/commit/1091cc6b5e54fb6281b19f35d6c45cb77933e2aa))
+
+
+
+
+
 # [0.3.0](https://github.com/qualipsolutions/snapdev-ui/compare/showcase@0.2.0...showcase@0.3.0) (2021-02-15)
 
 
