@@ -11,14 +11,6 @@ const themeNames = Object.keys(themes);
 export default ({ children }) => {
   const theme = select('Theme', themeNames, themeNames[0], 'Themes');
 
-  // const customTheme = {
-  //   palette: {
-  //     primary: {
-  //       main: '#fff',
-  //     },
-  //   },
-  // };
-
   return (
     <ThemeProvider theme={themes[theme]({ theme: {} })}>
       {children}

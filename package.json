@@ -8,6 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --stream",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:debug": "eslint . --debug --ext .js,.jsx,.ts,.tsx",
     "publish": "lerna run publish",
     "docs": "doctoc --title '**Table of content**' README.md",
     "clean": "lerna run clean",

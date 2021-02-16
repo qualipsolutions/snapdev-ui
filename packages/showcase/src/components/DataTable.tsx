@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Section, DataTable } from '@snapdev-ui/core';
+import { Section, DataTable } from '@snapdev-ui/core';
 
 const Component = () => (
   <Section title="Data Table">

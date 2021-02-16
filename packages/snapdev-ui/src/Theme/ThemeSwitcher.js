@@ -4,7 +4,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 
-import { StyleContext } from '../context/StyleProvider';
+import { StyleContext } from './StyleProvider';
 
 const ThemeSwitcher = () => {
   const { useDarkTheme, switchTheme } = useContext(StyleContext);

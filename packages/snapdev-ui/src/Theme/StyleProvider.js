@@ -4,7 +4,8 @@ import {
   ThemeProvider,
   createGenerateClassName,
 } from '@material-ui/core/styles';
-import { DarkTheme, LightTheme } from '@snapdev-ui/core';
+import DarkTheme from './DarkTheme';
+import LightTheme from './LightTheme';
 
 const generateClassName = createGenerateClassName({
   // productionPrefix: 'frenchieStoreHost',

@@ -118,7 +118,7 @@ export * from './Spacer';
 export { default as TextField } from './TextField';
 export * from './TextField';
 
-export { DarkTheme, LightTheme } from './Theme';
+export { DarkTheme, LightTheme, StyleProvider, ThemeSwitcher } from './Theme';
 export * from './Theme';
 
 export { default as AppBar } from './AppBar';

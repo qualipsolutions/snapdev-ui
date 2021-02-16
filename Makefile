@@ -22,3 +22,8 @@ storybook:
 build-docs:
 	cd packages/snapdev-ui && yarn build:docs
 
+lint:
+	yarn lint
+
+lint-debug:
+	yarn lint:debug

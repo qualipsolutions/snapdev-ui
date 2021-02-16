@@ -77,6 +77,6 @@ export { default as Row } from './Row';
 export { default as Center } from './Center';
 export { default as Spacer } from './Spacer';
 export { default as TextField } from './TextField';
-export { DarkTheme, LightTheme } from './Theme';
+export { DarkTheme, LightTheme, StyleProvider, ThemeSwitcher } from './Theme';
 export { default as AppBar } from './AppBar';
 export { default as Progress } from './Progress';

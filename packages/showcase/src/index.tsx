@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import StyleProvider from './context/StyleProvider';
+import { StyleProvider } from '@snapdev-ui/core';
 
 ReactDOM.render(
   <StyleProvider>

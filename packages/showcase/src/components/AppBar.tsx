@@ -1,7 +1,6 @@
 import React from 'react';
-import { AppBar } from '@snapdev-ui/core';
+import { AppBar, ThemeSwitcher } from '@snapdev-ui/core';
 // import AppBar from '@snapdev-ui/core/AppBar';
-import ThemeSwitcher from './ThemeSwitcher';
 
 const Component = () => (
   <AppBar
