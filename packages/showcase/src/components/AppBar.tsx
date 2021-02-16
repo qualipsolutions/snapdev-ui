@@ -1,6 +1,5 @@
 import React from 'react';
-import { AppBar, ThemeSwitcher } from '@snapdev-ui/core';
-// import AppBar from '@snapdev-ui/core/AppBar';
+import { AppBar } from '@snapdev-ui/core';
 
 const Component = () => (
   <AppBar
@@ -21,7 +20,7 @@ const Component = () => (
         title: 'Inbox',
       },
     ]}
-    themeSwitcher={<ThemeSwitcher />}
+    themeSwitcher
   />
 );
 

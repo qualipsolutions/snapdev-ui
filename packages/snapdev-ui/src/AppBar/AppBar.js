@@ -18,6 +18,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import DeviceHubIcon from '@material-ui/icons/DeviceHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as RouterLink } from 'react-router-dom';
+import { ThemeSwitcher } from '../Theme';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -211,7 +212,7 @@ const AppBar = (props) => {
         )}
 
         <div className={classes.grow} />
-        {themeSwitcher ? themeSwitcher : <></>}
+        {themeSwitcher ? <ThemeSwitcher /> : <></>}
 
         {!isSignedIn ? (
           <Hidden xsDown>
@@ -278,22 +279,6 @@ const AppBar = (props) => {
       </Toolbar>
     </MuiAppBar>
   );
-};
-
-AppBar.propTypes = {
-  handleTabChange: PropTypes.func,
-  handleSignOut: PropTypes.func,
-  handleSignIn: PropTypes.func,
-  title: PropTypes.string,
-  isSignedIn: PropTypes.bool,
-  email: PropTypes.string,
-  processing: PropTypes.bool,
-  appName: PropTypes.string,
-  position: PropTypes.string,
-  color: PropTypes.string,
-  appIndex: PropTypes.number,
-  elevation: PropTypes.number,
-  apps: PropTypes.array,
 };
 
 export default AppBar;
