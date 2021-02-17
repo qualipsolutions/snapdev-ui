@@ -7,11 +7,15 @@ const Column = (props) => {
     heightOffset = '0px',
     stretch = false,
     style,
+    debug,
     ...rest
   } = props;
   const moreStyles = {};
   if (stretch) {
     moreStyles.height = `calc(100vh - ${heightOffset})`;
+  }
+  if (debug) {
+    moreStyles.backgroundColor = debug;
   }
   return (
     <Grid
