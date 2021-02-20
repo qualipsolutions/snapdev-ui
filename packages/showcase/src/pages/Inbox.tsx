@@ -46,7 +46,7 @@ const Components: React.FunctionComponent<ComponentsProps> = () => {
           <br />
         </Item>
         <Item>
-          <Row stretch heightOffset="10rem" spacing={2}>
+          <Row stretch heightOffset="13rem" spacing={2}>
             <Item
               xs={12}
               sm={6}

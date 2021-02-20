@@ -32,6 +32,7 @@ export interface StandardProps extends BreakpointValues {
   style?: React.CSSProperties;
   spacing?: GridSpacing;
   className?: string;
+  debug?: string;
 }
 
 export interface InputProps {
