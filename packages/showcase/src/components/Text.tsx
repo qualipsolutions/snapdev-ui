@@ -3,7 +3,7 @@ import { Text, Section } from '@snapdev-ui/core';
 
 const Component = () => (
   <Section title="Text">
-    <Text variant="h1">
+    <Text variant="h1" color="textSecondary">
       h1: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     </Text>
     <Text variant="h2">

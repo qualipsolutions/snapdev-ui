@@ -8,10 +8,13 @@ const DarkTheme = (props) => {
     palette: {
       type: 'dark',
       primary: {
-        main: '#F8D12C',
+        main: '#f9b934',
       },
       secondary: {
-        main: '#cfd8dc',
+        main: '#90caf9',
+      },
+      text: {
+        secondary: '#AEB0B4',
       },
       background: {
         paper: '#2a2d35',
