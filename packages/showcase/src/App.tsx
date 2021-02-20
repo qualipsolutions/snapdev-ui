@@ -11,8 +11,15 @@ const InboxPage = lazy(() => import('./pages/Inbox'));
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
+    '*': {
+      boxSizing: 'border-box',
+      margin: 0,
+      padding: 0,
+    },
     html: {
-      WebkitFontSmoothing: 'auto',
+      '-webkit-font-smoothing': 'antialiased',
+      // '-moz-osx-font-smoothing': 'grayscale',
+      // overflowY: 'scroll',
       margin: 0,
       padding: 0,
       height: '100%',

@@ -11,9 +11,9 @@ const LightTheme = (props) => {
         head: '#fafafa',
         body: '#fff',
       },
-      text: {
-        secondary: '#AEB0B4',
-      },
+      // text: {
+      //   secondary: '#AEB0B4',
+      // },
       progress: {
         background: 'rgb(182, 188, 226)',
         indicator: '#3f51b5',

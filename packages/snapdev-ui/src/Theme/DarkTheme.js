@@ -11,11 +11,12 @@ const DarkTheme = (props) => {
         main: '#f9b934',
       },
       secondary: {
-        main: '#90caf9',
+        // main: '#90caf9',
+        main: 'rgb(220, 0, 78)',
       },
-      text: {
-        secondary: '#AEB0B4',
-      },
+      // text: {
+      //   secondary: '#AEB0B4',
+      // },
       background: {
         paper: '#2a2d35',
         default: '#24262d',
